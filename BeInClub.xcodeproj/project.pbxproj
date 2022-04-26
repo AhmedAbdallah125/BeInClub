@@ -58,16 +58,40 @@
 		E287A2F32818361C00595B18 /* BeInClub */ = {
 			isa = PBXGroup;
 			children = (
+				E287A30D281836C100595B18 /* Controller */,
+				E287A30C281836B900595B18 /* View */,
+				E287A30B281836AF00595B18 /* Model */,
 				E287A2F42818361C00595B18 /* AppDelegate.swift */,
 				E287A2F62818361C00595B18 /* SceneDelegate.swift */,
-				E287A2F82818361C00595B18 /* ViewController.swift */,
-				E287A2FA2818361C00595B18 /* Main.storyboard */,
 				E287A3002818361E00595B18 /* Assets.xcassets */,
-				E287A3022818361E00595B18 /* LaunchScreen.storyboard */,
 				E287A3052818361E00595B18 /* Info.plist */,
 				E287A2FD2818361C00595B18 /* BeInClub.xcdatamodeld */,
 			);
 			path = BeInClub;
+			sourceTree = "<group>";
+		};
+		E287A30B281836AF00595B18 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E287A30C281836B900595B18 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E287A3022818361E00595B18 /* LaunchScreen.storyboard */,
+				E287A2FA2818361C00595B18 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E287A30D281836C100595B18 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E287A2F82818361C00595B18 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,7 +333,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -336,7 +360,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
