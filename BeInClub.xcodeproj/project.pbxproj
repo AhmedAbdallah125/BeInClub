@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB75B1FB281B2A3D00733F8D /* LeaguesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB75B1FA281B2A3D00733F8D /* LeaguesViewController.swift */; };
+		AB75B1FD281B2AF500733F8D /* LeaguesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB75B1FC281B2AF500733F8D /* LeaguesTableViewCell.swift */; };
 		E287A2F52818361C00595B18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287A2F42818361C00595B18 /* AppDelegate.swift */; };
 		E287A2F72818361C00595B18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287A2F62818361C00595B18 /* SceneDelegate.swift */; };
 		E287A2F92818361C00595B18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287A2F82818361C00595B18 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB75B1FA281B2A3D00733F8D /* LeaguesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesViewController.swift; sourceTree = "<group>"; };
+		AB75B1FC281B2AF500733F8D /* LeaguesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesTableViewCell.swift; sourceTree = "<group>"; };
 		E287A2F12818361C00595B18 /* BeInClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeInClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E287A2F42818361C00595B18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E287A2F62818361C00595B18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				E287A2F82818361C00595B18 /* ViewController.swift */,
+				AB75B1FA281B2A3D00733F8D /* LeaguesViewController.swift */,
+				AB75B1FC281B2AF500733F8D /* LeaguesTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,7 +173,9 @@
 			files = (
 				E287A2F92818361C00595B18 /* ViewController.swift in Sources */,
 				E287A2FF2818361C00595B18 /* BeInClub.xcdatamodeld in Sources */,
+				AB75B1FB281B2A3D00733F8D /* LeaguesViewController.swift in Sources */,
 				E287A2F52818361C00595B18 /* AppDelegate.swift in Sources */,
+				AB75B1FD281B2AF500733F8D /* LeaguesTableViewCell.swift in Sources */,
 				E287A2F72818361C00595B18 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
