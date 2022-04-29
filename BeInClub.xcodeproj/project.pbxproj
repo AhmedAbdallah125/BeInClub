@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C379B6B2819512F006E0A17 /* TeamsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C379B6A2819512F006E0A17 /* TeamsCollectionViewCell.swift */; };
+		9CA86C20281892F1009F4A2B /* UpcomingEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA86C1F281892F1009F4A2B /* UpcomingEventCollectionViewCell.swift */; };
+		9CA86C2228189AD0009F4A2B /* LeagueDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA86C2128189AD0009F4A2B /* LeagueDetailsViewController.swift */; };
+		9CC0EA5C2818BA58000C6D04 /* LatestResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0EA5B2818BA58000C6D04 /* LatestResultCollectionViewCell.swift */; };
 		E287A2F52818361C00595B18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287A2F42818361C00595B18 /* AppDelegate.swift */; };
 		E287A2F72818361C00595B18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287A2F62818361C00595B18 /* SceneDelegate.swift */; };
 		E287A2F92818361C00595B18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287A2F82818361C00595B18 /* ViewController.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C379B6A2819512F006E0A17 /* TeamsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCollectionViewCell.swift; sourceTree = "<group>"; };
+		9CA86C1F281892F1009F4A2B /* UpcomingEventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEventCollectionViewCell.swift; sourceTree = "<group>"; };
+		9CA86C2128189AD0009F4A2B /* LeagueDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailsViewController.swift; sourceTree = "<group>"; };
+		9CC0EA5B2818BA58000C6D04 /* LatestResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestResultCollectionViewCell.swift; sourceTree = "<group>"; };
 		E287A2F12818361C00595B18 /* BeInClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeInClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E287A2F42818361C00595B18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E287A2F62818361C00595B18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +47,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C8B7AA128198C9900C91E31 /* leagueDetails */ = {
+			isa = PBXGroup;
+			children = (
+				9CA86C1F281892F1009F4A2B /* UpcomingEventCollectionViewCell.swift */,
+				9CA86C2128189AD0009F4A2B /* LeagueDetailsViewController.swift */,
+				9CC0EA5B2818BA58000C6D04 /* LatestResultCollectionViewCell.swift */,
+				9C379B6A2819512F006E0A17 /* TeamsCollectionViewCell.swift */,
+			);
+			path = leagueDetails;
+			sourceTree = "<group>";
+		};
 		E287A2E82818361C00595B18 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +108,7 @@
 		E287A30D281836C100595B18 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9C8B7AA128198C9900C91E31 /* leagueDetails */,
 				E287A2F82818361C00595B18 /* ViewController.swift */,
 			);
 			path = Controller;
@@ -166,9 +186,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E287A2F92818361C00595B18 /* ViewController.swift in Sources */,
+				9C379B6B2819512F006E0A17 /* TeamsCollectionViewCell.swift in Sources */,
 				E287A2FF2818361C00595B18 /* BeInClub.xcdatamodeld in Sources */,
 				E287A2F52818361C00595B18 /* AppDelegate.swift in Sources */,
+				9CC0EA5C2818BA58000C6D04 /* LatestResultCollectionViewCell.swift in Sources */,
 				E287A2F72818361C00595B18 /* SceneDelegate.swift in Sources */,
+				9CA86C2228189AD0009F4A2B /* LeagueDetailsViewController.swift in Sources */,
+				9CA86C20281892F1009F4A2B /* UpcomingEventCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
