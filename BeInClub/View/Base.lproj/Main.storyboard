@@ -1,24 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BvN-Mk-JFO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BeInClub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-2517" y="80"/>
+        </scene>
+        <!--Sports-->
+        <scene sceneID="4Rw-fX-bAE">
+            <objects>
+                <viewController id="1fv-hH-maJ" customClass="SportsViewController" customModule="BeInClub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u5Y-Qy-lBG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A50-Rt-VmF">
+                                <rect key="frame" x="0.0" y="84" width="414" height="689"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UeD-gi-WDX">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sportsCell" id="UsW-8C-BjT" customClass="SportsCollectionViewCell" customModule="BeInClub" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="176" height="168"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="168"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KwH-mT-waX">
+                                                    <rect key="frame" x="4" y="4" width="172" height="164"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdw-Sf-UVL">
+                                                    <rect key="frame" x="4" y="141.5" width="170" height="26.5"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="KwH-mT-waX" secondAttribute="trailing" id="8Ye-uN-2Yl"/>
+                                            <constraint firstItem="KwH-mT-waX" firstAttribute="top" secondItem="UsW-8C-BjT" secondAttribute="top" constant="4" id="Sek-7E-CkV"/>
+                                            <constraint firstAttribute="bottom" secondItem="cdw-Sf-UVL" secondAttribute="bottom" id="THW-T5-xYm"/>
+                                            <constraint firstItem="cdw-Sf-UVL" firstAttribute="leading" secondItem="UsW-8C-BjT" secondAttribute="leading" constant="4" id="Y0H-M6-GtG"/>
+                                            <constraint firstAttribute="trailing" secondItem="cdw-Sf-UVL" secondAttribute="trailing" constant="2" id="fsh-xk-rA8"/>
+                                            <constraint firstItem="KwH-mT-waX" firstAttribute="leading" secondItem="UsW-8C-BjT" secondAttribute="leading" constant="4" id="j5L-LD-9Bj"/>
+                                            <constraint firstAttribute="bottom" secondItem="KwH-mT-waX" secondAttribute="bottom" id="x5B-yw-rJD"/>
+                                        </constraints>
+                                        <size key="customSize" width="176" height="168"/>
+                                        <connections>
+                                            <outlet property="sportImage" destination="KwH-mT-waX" id="4QI-r1-sz8"/>
+                                            <outlet property="sportLabel" destination="cdw-Sf-UVL" id="hyJ-f9-HK7"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="1fv-hH-maJ" id="o0I-nX-z5e"/>
+                                    <outlet property="delegate" destination="1fv-hH-maJ" id="AJj-Lb-jrk"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yVe-bh-Y17"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yVe-bh-Y17" firstAttribute="trailing" secondItem="A50-Rt-VmF" secondAttribute="trailing" id="5xs-vO-peB"/>
+                            <constraint firstItem="A50-Rt-VmF" firstAttribute="top" secondItem="yVe-bh-Y17" secondAttribute="top" constant="40" id="HKu-DY-xFe"/>
+                            <constraint firstItem="A50-Rt-VmF" firstAttribute="leading" secondItem="yVe-bh-Y17" secondAttribute="leading" id="d58-yw-7o3"/>
+                            <constraint firstItem="yVe-bh-Y17" firstAttribute="bottom" secondItem="A50-Rt-VmF" secondAttribute="bottom" constant="40" id="fOS-00-1Vm"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Sports" image="homekit" catalog="system" id="I63-hF-hAI"/>
+                    <connections>
+                        <outlet property="collectionView" destination="A50-Rt-VmF" id="aKC-CG-GzF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cqT-Ic-xK8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-586.95652173913049" y="480.80357142857139"/>
+        </scene>
+        <!--Favourite-->
+        <scene sceneID="9Lc-qd-341">
+            <objects>
+                <viewController id="7br-VR-3xa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ew3-wl-ANs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="41z-wM-5m6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favourite" image="heart.fill" catalog="system" id="F1v-w9-lur"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tDZ-DM-EUF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331" y="490"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="PkR-7Q-2Na">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="BvN-Mk-JFO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bcG-Be-frz">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemtintColor">
+                                <color key="value" systemColor="systemGroupedBackgroundColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1fv-hH-maJ" kind="relationship" relationship="viewControllers" id="qa2-Jp-bpq"/>
+                        <segue destination="7br-VR-3xa" kind="relationship" relationship="viewControllers" id="g02-HY-lCM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DiJ-8Z-2S3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30" y="-254"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="homekit" catalog="system" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

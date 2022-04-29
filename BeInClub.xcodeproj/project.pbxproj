@@ -14,6 +14,8 @@
 		E287A2FF2818361C00595B18 /* BeInClub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E287A2FD2818361C00595B18 /* BeInClub.xcdatamodeld */; };
 		E287A3012818361E00595B18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E287A3002818361E00595B18 /* Assets.xcassets */; };
 		E287A3042818361E00595B18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E287A3022818361E00595B18 /* LaunchScreen.storyboard */; };
+		E2E45F2E281891D300F07B8E /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E45F2D281891D300F07B8E /* SportsViewController.swift */; };
+		E2E45F302818955400F07B8E /* SportsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E45F2F2818955300F07B8E /* SportsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E287A3002818361E00595B18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E287A3032818361E00595B18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E287A3052818361E00595B18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2E45F2D281891D300F07B8E /* SportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsViewController.swift; sourceTree = "<group>"; };
+		E2E45F2F2818955300F07B8E /* SportsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 		E287A30C281836B900595B18 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E2E45F2F2818955300F07B8E /* SportsCollectionViewCell.swift */,
 				E287A3022818361E00595B18 /* LaunchScreen.storyboard */,
 				E287A2FA2818361C00595B18 /* Main.storyboard */,
 			);
@@ -89,6 +94,7 @@
 		E287A30D281836C100595B18 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E2E45F2D281891D300F07B8E /* SportsViewController.swift */,
 				E287A2F82818361C00595B18 /* ViewController.swift */,
 			);
 			path = Controller;
@@ -166,9 +172,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E287A2F92818361C00595B18 /* ViewController.swift in Sources */,
+				E2E45F302818955400F07B8E /* SportsCollectionViewCell.swift in Sources */,
 				E287A2FF2818361C00595B18 /* BeInClub.xcdatamodeld in Sources */,
 				E287A2F52818361C00595B18 /* AppDelegate.swift in Sources */,
 				E287A2F72818361C00595B18 /* SceneDelegate.swift in Sources */,
+				E2E45F2E281891D300F07B8E /* SportsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
