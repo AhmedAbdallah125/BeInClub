@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABDFADDB281DFF6000CC86DE /* LeaguesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFADDA281DFF6000CC86DE /* LeaguesViewController.swift */; };
+		ABDFADDD281DFFCB00CC86DE /* LeaguesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFADDC281DFFCB00CC86DE /* LeaguesTableViewCell.swift */; };
 		E287A2F52818361C00595B18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287A2F42818361C00595B18 /* AppDelegate.swift */; };
 		E287A2F72818361C00595B18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287A2F62818361C00595B18 /* SceneDelegate.swift */; };
 		E287A2F92818361C00595B18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287A2F82818361C00595B18 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ABDFADDA281DFF6000CC86DE /* LeaguesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesViewController.swift; sourceTree = "<group>"; };
+		ABDFADDC281DFFCB00CC86DE /* LeaguesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesTableViewCell.swift; sourceTree = "<group>"; };
 		E287A2F12818361C00595B18 /* BeInClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeInClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E287A2F42818361C00595B18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E287A2F62818361C00595B18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 			children = (
 				E2E45F2D281891D300F07B8E /* SportsViewController.swift */,
 				E287A2F82818361C00595B18 /* ViewController.swift */,
+				ABDFADDA281DFF6000CC86DE /* LeaguesViewController.swift */,
+				ABDFADDC281DFFCB00CC86DE /* LeaguesTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,8 +180,10 @@
 				E287A2F92818361C00595B18 /* ViewController.swift in Sources */,
 				E2E45F302818955400F07B8E /* SportsCollectionViewCell.swift in Sources */,
 				E287A2FF2818361C00595B18 /* BeInClub.xcdatamodeld in Sources */,
+				ABDFADDB281DFF6000CC86DE /* LeaguesViewController.swift in Sources */,
 				E287A2F52818361C00595B18 /* AppDelegate.swift in Sources */,
 				E287A2F72818361C00595B18 /* SceneDelegate.swift in Sources */,
+				ABDFADDD281DFFCB00CC86DE /* LeaguesTableViewCell.swift in Sources */,
 				E2E45F2E281891D300F07B8E /* SportsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +333,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6B9NN8DX9Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BeInClub/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -332,6 +341,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,6 +362,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6B9NN8DX9Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BeInClub/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -359,6 +370,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
