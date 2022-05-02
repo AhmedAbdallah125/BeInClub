@@ -7,21 +7,23 @@
 
 import UIKit
 
-class LeagueDetailsViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
+ class LeagueDetailsViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
+    
+    
+    @IBOutlet weak var eventCV: UICollectionView!
     
     @IBOutlet weak var teamsCV: UICollectionView!
-    @IBOutlet weak var eventCV: UICollectionView!
     @IBOutlet weak var resultCV: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        teamsCV.delegate = self
-        teamsCV.dataSource = self
+        self.teamsCV.delegate = self
+        self.teamsCV.dataSource = self
         
-        eventCV.delegate = self
-        eventCV.dataSource = self
+        self.eventCV.delegate = self
+        self.eventCV.dataSource = self
         
-        resultCV.delegate = self
-        resultCV.dataSource = self
+        self.resultCV.delegate = self
+        self.resultCV.dataSource = self
         // Do any additional setup after loading the view.
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
