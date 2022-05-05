@@ -7,6 +7,6 @@
 
 import UIKit
 
-class URLs: NSObject {
-
+class URLs {
+    public static let allSportsURL:String = "https://www.thesportsdb.com/api/v1/json/2/all_sports.php"
 }
