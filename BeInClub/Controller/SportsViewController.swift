@@ -6,39 +6,70 @@
 //
 
 import UIKit
-struct Movie{
-    let photo:UIImage
-    let tiltle:String
-}
+import Reachability
+import Kingfisher
+
 private let reuseIdentifier = "sportsCell"
 
 class SportsViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource
-    ,UICollectionViewDelegateFlowLayout
+,UICollectionViewDelegateFlowLayout
 {
-  
-    
- 
-    
-    //try
-    
     @IBOutlet weak var collectionView: UICollectionView!
-    var arrMovies = [Movie]()
+    
+    let reachability = try! Reachability()
+    var networkIndicator :UIActivityIndicatorView!
+    var sportsArray:[Sport] = [Sport]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //for indicator
+        initActivityIndicator()
+        title = "Sports"
         
-
-        arrMovies.append(Movie(photo: UIImage(named: "football")!, tiltle: "Footballl"))
-        arrMovies.append(Movie(photo: UIImage(named: "football")!, tiltle: "Footballl"))
-        arrMovies.append(Movie(photo: UIImage(named: "football")!, tiltle: "Footballl"))
-        arrMovies.append(Movie(photo: UIImage(named: "football")!, tiltle: "Footballl"))
-        arrMovies.append(Movie(photo: UIImage(named: "football")!, tiltle: "Footballl"))
-        arrMovies.append(Movie(photo: UIImage(named: "football")!, tiltle: "Footballl"))
-
-       
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //first
+        networkIndicator.stopAnimating()
+        reachability.whenReachable = { reachability in
+            // connect and get data from api
+            NetworkService.getAllSportsResponse{
+                [weak self] (result) in
+                self?.sportsArray = result?.sports ?? []
+                self?.collectionView.reloadData()
+            }
+        }
+        reachability.whenUnreachable = { _ in
+            print("Not reachable")
+            //make alert
+            self.showNoInternetAlert()
+        }
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("Unable to start notifier")
+        }
+    }
+    func initActivityIndicator(){
+        networkIndicator = UIActivityIndicatorView(style: .large)
+        networkIndicator.center = view.center
+        view.addSubview(networkIndicator)
+        networkIndicator.startAnimating()
+    }
+    func showNoInternetAlert(){
+        let alert = UIAlertController(title: "There is NO Connection", message: "You should Connect to Network to get Data", preferredStyle: UIAlertController.Style.actionSheet)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+}
+
+extension SportsViewController{
+    //for collection setting
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrMovies.count
+        return sportsArray.count
         
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -46,9 +77,14 @@ class SportsViewController: UIViewController,UICollectionViewDelegate,UICollecti
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sportsCell", for: indexPath) as! SportsCollectionViewCell
-  
-        cell.setupSportCell(photo: arrMovies[indexPath.row].photo, title: arrMovies[indexPath.row].tiltle)
-//        cell.backgroundColor = UIColor.red
+        //setData
+        cell.sportImage.kf.setImage(
+            with: URL(string: sportsArray[indexPath.row].strSportThumb),
+            placeholder: UIImage(named: "sports"),
+            options: [
+                .cacheOriginalImage
+            ]){result in}
+        cell.sportLabel.text = sportsArray[indexPath.row].strSport
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -60,6 +96,4 @@ class SportsViewController: UIViewController,UICollectionViewDelegate,UICollecti
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0.1
     }
-   
-    
 }
