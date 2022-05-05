@@ -19,6 +19,7 @@
 		ABDFADDB281DFF6000CC86DE /* LeaguesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFADDA281DFF6000CC86DE /* LeaguesViewController.swift */; };
 		ABDFADDD281DFFCB00CC86DE /* LeaguesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFADDC281DFFCB00CC86DE /* LeaguesTableViewCell.swift */; };
 		E2679E5D2823F16F0062FDDF /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2679E5C2823F16F0062FDDF /* URLs.swift */; };
+		E2679E602823F4AE0062FDDF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2679E5F2823F4AE0062FDDF /* NetworkService.swift */; };
 		E287A2F52818361C00595B18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287A2F42818361C00595B18 /* AppDelegate.swift */; };
 		E287A2F72818361C00595B18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287A2F62818361C00595B18 /* SceneDelegate.swift */; };
 		E287A2F92818361C00595B18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287A2F82818361C00595B18 /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 		ABDFADDC281DFFCB00CC86DE /* LeaguesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesTableViewCell.swift; sourceTree = "<group>"; };
 		AD5E1102CDA21509348FC081 /* Pods_BeInClub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeInClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2679E5C2823F16F0062FDDF /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		E2679E5F2823F4AE0062FDDF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E287A2F12818361C00595B18 /* BeInClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeInClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E287A2F42818361C00595B18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E287A2F62818361C00595B18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
+		E2679E5E2823F4390062FDDF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E2679E5F2823F4AE0062FDDF /* NetworkService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		E287A2E82818361C00595B18 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +153,7 @@
 		E287A30B281836AF00595B18 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E2679E5E2823F4390062FDDF /* Service */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,6 +309,7 @@
 				E287A2FF2818361C00595B18 /* BeInClub.xcdatamodeld in Sources */,
 				ABDFADDB281DFF6000CC86DE /* LeaguesViewController.swift in Sources */,
 				E287A2F52818361C00595B18 /* AppDelegate.swift in Sources */,
+				E2679E602823F4AE0062FDDF /* NetworkService.swift in Sources */,
 				E287A2F72818361C00595B18 /* SceneDelegate.swift in Sources */,
 				9C52E7F428217D520075A02A /* LatestResultCollectionViewCell.swift in Sources */,
 				ABDFADDD281DFFCB00CC86DE /* LeaguesTableViewCell.swift in Sources */,
