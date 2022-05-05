@@ -12,7 +12,7 @@ import Kingfisher
 private let reuseIdentifier = "sportsCell"
 
 class SportsViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource
-    ,UICollectionViewDelegateFlowLayout
+,UICollectionViewDelegateFlowLayout
 {
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -23,11 +23,9 @@ class SportsViewController: UIViewController,UICollectionViewDelegate,UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         //for indicator
-        networkIndicator = UIActivityIndicatorView(style: .large)
-        networkIndicator.center = view.center
-        view.addSubview(networkIndicator)
-        networkIndicator.startAnimating()
-  
+        initActivityIndicator()
+        title = "Sports"
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -43,19 +41,23 @@ class SportsViewController: UIViewController,UICollectionViewDelegate,UICollecti
         }
         reachability.whenUnreachable = { _ in
             print("Not reachable")
-            self.collectionView.reloadData()
             //make alert
             self.showNoInternetAlert()
         }
-
         do {
             try reachability.startNotifier()
         } catch {
             print("Unable to start notifier")
         }
     }
+    func initActivityIndicator(){
+        networkIndicator = UIActivityIndicatorView(style: .large)
+        networkIndicator.center = view.center
+        view.addSubview(networkIndicator)
+        networkIndicator.startAnimating()
+    }
     func showNoInternetAlert(){
-        let alert = UIAlertController(title: "NO Connection To Internet", message: "You should Connect to Network to get Data", preferredStyle: UIAlertController.Style.actionSheet)
+        let alert = UIAlertController(title: "There is NO Connection", message: "You should Connect to Network to get Data", preferredStyle: UIAlertController.Style.actionSheet)
         let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
@@ -76,7 +78,12 @@ extension SportsViewController{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sportsCell", for: indexPath) as! SportsCollectionViewCell
         //setData
-        cell.sportImage.kf.setImage(with:URL(string: sportsArray[indexPath.row].strSportThumb))
+        cell.sportImage.kf.setImage(
+            with: URL(string: sportsArray[indexPath.row].strSportThumb),
+            placeholder: UIImage(named: "sports"),
+            options: [
+                .cacheOriginalImage
+            ]){result in}
         cell.sportLabel.text = sportsArray[indexPath.row].strSport
         return cell
     }
