@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		195D87ACEAFA4A69E82503AC /* Pods_BeInClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82BA0BA5E9279ACD389F3EA /* Pods_BeInClub.framework */; };
+		3F95991C28257147005E5105 /* Detalis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95991B28257147005E5105 /* Detalis.swift */; };
+		3F95991E282572FC005E5105 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95991D282572FC005E5105 /* DetailsViewController.swift */; };
 		9C52E7F428217D520075A02A /* LatestResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C52E7F228217D520075A02A /* LatestResultCollectionViewCell.swift */; };
 		9C52E7F528217D520075A02A /* LatestResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C52E7F328217D520075A02A /* LatestResultCollectionViewCell.xib */; };
 		9C52E7F828217F550075A02A /* TeamsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C52E7F628217F550075A02A /* TeamsCollectionViewCell.swift */; };
@@ -18,8 +21,12 @@
 		9CE12313282159F100E3EDEF /* UpcomingEventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE12311282159F100E3EDEF /* UpcomingEventCollectionViewCell.xib */; };
 		ABDFADDB281DFF6000CC86DE /* LeaguesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFADDA281DFF6000CC86DE /* LeaguesViewController.swift */; };
 		ABDFADDD281DFFCB00CC86DE /* LeaguesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFADDC281DFFCB00CC86DE /* LeaguesTableViewCell.swift */; };
+		E21AAA352824A8FC0006A56B /* CountryChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AAA342824A8FC0006A56B /* CountryChoiceViewController.swift */; };
+		E21AAA372824C3050006A56B /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AAA362824C3050006A56B /* CountryTableViewCell.swift */; };
 		E2679E5D2823F16F0062FDDF /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2679E5C2823F16F0062FDDF /* URLs.swift */; };
 		E2679E602823F4AE0062FDDF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2679E5F2823F4AE0062FDDF /* NetworkService.swift */; };
+		E2679E622823F7120062FDDF /* AllSportsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2679E612823F7120062FDDF /* AllSportsResponse.swift */; };
+		E2679E642823F7810062FDDF /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2679E632823F7810062FDDF /* Sport.swift */; };
 		E287A2F52818361C00595B18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287A2F42818361C00595B18 /* AppDelegate.swift */; };
 		E287A2F72818361C00595B18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287A2F62818361C00595B18 /* SceneDelegate.swift */; };
 		E287A2F92818361C00595B18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287A2F82818361C00595B18 /* ViewController.swift */; };
@@ -27,13 +34,17 @@
 		E287A2FF2818361C00595B18 /* BeInClub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E287A2FD2818361C00595B18 /* BeInClub.xcdatamodeld */; };
 		E287A3012818361E00595B18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E287A3002818361E00595B18 /* Assets.xcassets */; };
 		E287A3042818361E00595B18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E287A3022818361E00595B18 /* LaunchScreen.storyboard */; };
+		E29E32E52824207500328521 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		E2E45F2E281891D300F07B8E /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E45F2D281891D300F07B8E /* SportsViewController.swift */; };
 		E2E45F302818955400F07B8E /* SportsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E45F2F2818955300F07B8E /* SportsCollectionViewCell.swift */; };
 		ECC5A552937344EA78841111 /* Pods_BeInClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BC451BF6363183F5E55969 /* Pods_BeInClub.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		219E1963B8C58B3502CA9D90 /* Pods-BeInClub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeInClub.debug.xcconfig"; path = "Target Support Files/Pods-BeInClub/Pods-BeInClub.debug.xcconfig"; sourceTree = "<group>"; };
+		210C76F9E69CBC7C44823B56 /* Pods-BeInClub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeInClub.debug.xcconfig"; path = "Target Support Files/Pods-BeInClub/Pods-BeInClub.debug.xcconfig"; sourceTree = "<group>"; };
+		3442B84EFD36EFF07EA9A0EC /* Pods-BeInClub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeInClub.release.xcconfig"; path = "Target Support Files/Pods-BeInClub/Pods-BeInClub.release.xcconfig"; sourceTree = "<group>"; };
+		3F95991B28257147005E5105 /* Detalis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detalis.swift; sourceTree = "<group>"; };
+		3F95991D282572FC005E5105 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		9C52E7F228217D520075A02A /* LatestResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestResultCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C52E7F328217D520075A02A /* LatestResultCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LatestResultCollectionViewCell.xib; sourceTree = "<group>"; };
 		9C52E7F628217F550075A02A /* TeamsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -43,11 +54,17 @@
 		9CBE3CC128243141003B5E0C /* LeagueDetailsDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailsDataClass.swift; sourceTree = "<group>"; };
 		9CE12310282159F100E3EDEF /* UpcomingEventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEventCollectionViewCell.swift; sourceTree = "<group>"; };
 		9CE12311282159F100E3EDEF /* UpcomingEventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingEventCollectionViewCell.xib; sourceTree = "<group>"; };
+		A82BA0BA5E9279ACD389F3EA /* Pods_BeInClub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeInClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABDFADDA281DFF6000CC86DE /* LeaguesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesViewController.swift; sourceTree = "<group>"; };
 		ABDFADDC281DFFCB00CC86DE /* LeaguesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesTableViewCell.swift; sourceTree = "<group>"; };
-		B0BC451BF6363183F5E55969 /* Pods_BeInClub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeInClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+
+		E21AAA342824A8FC0006A56B /* CountryChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryChoiceViewController.swift; sourceTree = "<group>"; };
+		E21AAA362824C3050006A56B /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+
 		E2679E5C2823F16F0062FDDF /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		E2679E5F2823F4AE0062FDDF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E2679E612823F7120062FDDF /* AllSportsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllSportsResponse.swift; sourceTree = "<group>"; };
+		E2679E632823F7810062FDDF /* Sport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 		E287A2F12818361C00595B18 /* BeInClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeInClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E287A2F42818361C00595B18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E287A2F62818361C00595B18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +76,6 @@
 		E287A3052818361E00595B18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2E45F2D281891D300F07B8E /* SportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsViewController.swift; sourceTree = "<group>"; };
 		E2E45F2F2818955300F07B8E /* SportsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsCollectionViewCell.swift; sourceTree = "<group>"; };
-		F000C1BA7C79F14159B99FFA /* Pods-BeInClub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeInClub.release.xcconfig"; path = "Target Support Files/Pods-BeInClub/Pods-BeInClub.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,17 +83,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECC5A552937344EA78841111 /* Pods_BeInClub.framework in Frameworks */,
+
+				195D87ACEAFA4A69E82503AC /* Pods_BeInClub.framework in Frameworks */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6EDA80D942BCCF367132EB40 /* Frameworks */ = {
+		93585B4240759C5F75C11E48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B0BC451BF6363183F5E55969 /* Pods_BeInClub.framework */,
+
+				A82BA0BA5E9279ACD389F3EA /* Pods_BeInClub.framework */,
+
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -85,7 +105,9 @@
 		9C68016C28241C4800FC8A22 /* PONSO */ = {
 			isa = PBXGroup;
 			children = (
-				9CBE3CC128243141003B5E0C /* LeagueDetailsDataClass.swift */,
+
+				3F95991B28257147005E5105 /* Detalis.swift */,
+
 			);
 			path = PONSO;
 			sourceTree = "<group>";
@@ -104,8 +126,8 @@
 		B055B8EAB27EB7725F03036B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				219E1963B8C58B3502CA9D90 /* Pods-BeInClub.debug.xcconfig */,
-				F000C1BA7C79F14159B99FFA /* Pods-BeInClub.release.xcconfig */,
+				210C76F9E69CBC7C44823B56 /* Pods-BeInClub.debug.xcconfig */,
+				3442B84EFD36EFF07EA9A0EC /* Pods-BeInClub.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -132,7 +154,7 @@
 				E287A2F32818361C00595B18 /* BeInClub */,
 				E287A2F22818361C00595B18 /* Products */,
 				B055B8EAB27EB7725F03036B /* Pods */,
-				6EDA80D942BCCF367132EB40 /* Frameworks */,
+				93585B4240759C5F75C11E48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				E2679E5E2823F4390062FDDF /* Service */,
+				E2679E612823F7120062FDDF /* AllSportsResponse.swift */,
+				E2679E632823F7810062FDDF /* Sport.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,6 +203,7 @@
 				9CE12311282159F100E3EDEF /* UpcomingEventCollectionViewCell.xib */,
 				E287A3022818361E00595B18 /* LaunchScreen.storyboard */,
 				E287A2FA2818361C00595B18 /* Main.storyboard */,
+				E21AAA362824C3050006A56B /* CountryTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,11 +211,13 @@
 		E287A30D281836C100595B18 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E21AAA342824A8FC0006A56B /* CountryChoiceViewController.swift */,
 				9CA553972820085B00D8F3C1 /* league details */,
 				E2E45F2D281891D300F07B8E /* SportsViewController.swift */,
 				E287A2F82818361C00595B18 /* ViewController.swift */,
 				ABDFADDA281DFF6000CC86DE /* LeaguesViewController.swift */,
 				ABDFADDC281DFFCB00CC86DE /* LeaguesTableViewCell.swift */,
+				3F95991D282572FC005E5105 /* DetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -202,11 +229,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E287A3082818361E00595B18 /* Build configuration list for PBXNativeTarget "BeInClub" */;
 			buildPhases = (
-				088FD5374B2DAB3F6C02E4A1 /* [CP] Check Pods Manifest.lock */,
+				79DA3988791BF6CA23C26439 /* [CP] Check Pods Manifest.lock */,
 				E287A2ED2818361C00595B18 /* Sources */,
 				E287A2EE2818361C00595B18 /* Frameworks */,
 				E287A2EF2818361C00595B18 /* Resources */,
-				7B5C0FE458291204D1AF1010 /* [CP] Embed Pods Frameworks */,
+
+				2D85089204C494F169D1BF2D /* [CP] Embed Pods Frameworks */,
+
 			);
 			buildRules = (
 			);
@@ -257,6 +286,7 @@
 			files = (
 				9CA5539B2820087A00D8F3C1 /* LeagueDetailsViewController.xib in Resources */,
 				E287A3042818361E00595B18 /* LaunchScreen.storyboard in Resources */,
+				E29E32E52824207500328521 /* BuildFile in Resources */,
 				E287A3012818361E00595B18 /* Assets.xcassets in Resources */,
 				E287A2FC2818361C00595B18 /* Main.storyboard in Resources */,
 				9C52E7F528217D520075A02A /* LatestResultCollectionViewCell.xib in Resources */,
@@ -268,7 +298,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		088FD5374B2DAB3F6C02E4A1 /* [CP] Check Pods Manifest.lock */ = {
+		2D85089204C494F169D1BF2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeInClub/Pods-BeInClub-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeInClub/Pods-BeInClub-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeInClub/Pods-BeInClub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+
+		79DA3988791BF6CA23C26439 /* [CP] Check Pods Manifest.lock */ = {
+
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -290,23 +339,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7B5C0FE458291204D1AF1010 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeInClub/Pods-BeInClub-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeInClub/Pods-BeInClub-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeInClub/Pods-BeInClub-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -314,12 +346,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E21AAA372824C3050006A56B /* CountryTableViewCell.swift in Sources */,
 				E287A2F92818361C00595B18 /* ViewController.swift in Sources */,
 				E2679E5D2823F16F0062FDDF /* URLs.swift in Sources */,
 				E2E45F302818955400F07B8E /* SportsCollectionViewCell.swift in Sources */,
 				E287A2FF2818361C00595B18 /* BeInClub.xcdatamodeld in Sources */,
+				3F95991C28257147005E5105 /* Detalis.swift in Sources */,
 				ABDFADDB281DFF6000CC86DE /* LeaguesViewController.swift in Sources */,
-				9CBE3CC228243141003B5E0C /* LeagueDetailsDataClass.swift in Sources */,
+
+				E21AAA352824A8FC0006A56B /* CountryChoiceViewController.swift in Sources */,
+
 				E287A2F52818361C00595B18 /* AppDelegate.swift in Sources */,
 				E2679E602823F4AE0062FDDF /* NetworkService.swift in Sources */,
 				E287A2F72818361C00595B18 /* SceneDelegate.swift in Sources */,
@@ -328,7 +364,10 @@
 				9CA5539A2820087A00D8F3C1 /* LeagueDetailsViewController.swift in Sources */,
 				9C52E7F828217F550075A02A /* TeamsCollectionViewCell.swift in Sources */,
 				E2E45F2E281891D300F07B8E /* SportsViewController.swift in Sources */,
+				E2679E622823F7120062FDDF /* AllSportsResponse.swift in Sources */,
+				E2679E642823F7810062FDDF /* Sport.swift in Sources */,
 				9CE12312282159F100E3EDEF /* UpcomingEventCollectionViewCell.swift in Sources */,
+				3F95991E282572FC005E5105 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +511,7 @@
 		};
 		E287A3092818361E00595B18 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 219E1963B8C58B3502CA9D90 /* Pods-BeInClub.debug.xcconfig */;
+			baseConfigurationReference = 210C76F9E69CBC7C44823B56 /* Pods-BeInClub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -502,7 +541,7 @@
 		};
 		E287A30A2818361E00595B18 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F000C1BA7C79F14159B99FFA /* Pods-BeInClub.release.xcconfig */;
+			baseConfigurationReference = 3442B84EFD36EFF07EA9A0EC /* Pods-BeInClub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
