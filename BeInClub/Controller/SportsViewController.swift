@@ -22,6 +22,19 @@ class SportsViewController: UIViewController,UICollectionViewDelegate,UICollecti
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let label = UILabel(frame: CGRect(x: 10, y: 20, width: 50, height: 40))
+          label.font = UIFont.boldSystemFont(ofSize: 24)
+
+          label.text = "Sports"
+          
+          label.textAlignment = .center
+
+          self.navigationItem.titleView = label
+        
+//        navigationController?.navigationBar.prefersLargeTitles = true
+
+
         //for indicator
         initActivityIndicator()
         title = "Sports"
@@ -85,7 +98,11 @@ extension SportsViewController{
                 .cacheOriginalImage
             ]){result in}
         cell.sportLabel.text = sportsArray[indexPath.row].strSport
+        
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        handleCellClicking(sportName: sportsArray[indexPath.row].strSport)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width * 0.49, height: view.frame.width * 0.45)
@@ -95,5 +112,13 @@ extension SportsViewController{
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0.1
+    }
+}
+extension SportsViewController{
+    // handle cell clicking
+    func handleCellClicking(sportName:String){
+        let countryController = self.storyboard?.instantiateViewController(withIdentifier: "CountryChoiceViewController") as! CountryChoiceViewController
+        countryController.sportName = sportName
+        self.navigationController?.pushViewController(countryController, animated: true)
     }
 }
