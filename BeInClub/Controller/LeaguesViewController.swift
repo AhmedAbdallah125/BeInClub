@@ -51,23 +51,24 @@ class LeaguesViewController: UITableViewController {
         if(!items[indexPath.row].strYoutube!.isEmpty) {
             cell.leagueYoutube.image = UIImage.init(named: "youtube")
             
-            // click to youtube icon
-            let tapGestureRecognizer = CustomTapGestureRecognizer(target: self, action: #selector(imageTapped(gestureRecognizer:)))
-            tapGestureRecognizer.youtubeLink = items[indexPath.row].strYoutube
-            
-            cell.leagueYoutube.isUserInteractionEnabled = true
-            cell.leagueYoutube.addGestureRecognizer(tapGestureRecognizer)
-            
         } else {
             cell.leagueYoutube.image = UIImage.init(named: "youtube_trans")
         }
         
+        // click to youtube icon
+        let tapGestureRecognizer = CustomTapGestureRecognizer(target: self, action: #selector(imageTapped(gestureRecognizer:)))
+        tapGestureRecognizer.youtubeLink = items[indexPath.row].strYoutube
+        
+        cell.leagueYoutube.isUserInteractionEnabled = true
+        cell.leagueYoutube.addGestureRecognizer(tapGestureRecognizer)
         
         return cell
     }
     
     @objc func imageTapped(gestureRecognizer: CustomTapGestureRecognizer)
     {
+        if(!gestureRecognizer.youtubeLink!.isEmpty) {
+        
         guard let url = URL(string: "https://\(gestureRecognizer.youtubeLink!)") else { return }
         
         UIApplication.shared.open(url, completionHandler: { success in
@@ -77,6 +78,7 @@ class LeaguesViewController: UITableViewController {
                     print("failed")
                 }
             })
+        }
 
     }
     

@@ -12,7 +12,28 @@ protocol AllLeaguesService {
     static func getAllLeagues(compilationHandeler : @escaping ([League]?) -> Void)
 }
 
-class NetworkService : AllLeaguesService {
+protocol NetworkProtocol{
+    static func getAllSportsResponse(completionHandler : @escaping(AllSportsResponse?)->Void )
+}
+
+class NetworkService : AllLeaguesService, NetworkProtocol {
+
+        // for all sports response
+    static func getAllSportsResponse(completionHandler: @escaping(AllSportsResponse?) -> Void) {
+        //Using AlamoFire
+        Session.default.request(URLs.allSportsURL)
+            .responseDecodable(of:AllSportsResponse.self) {
+                response in
+                switch response.result {
+                case .success(let data):
+                    completionHandler(data)
+                case .failure(let error):
+                    print(error)
+                    completionHandler(nil)
+                }
+            }
+        
+    }
     
     static func getAllLeagues(compilationHandeler: @escaping ([League]?) -> Void) {
         
@@ -34,9 +55,7 @@ class NetworkService : AllLeaguesService {
                 }
                 
             }
-        
-        
-        
+            
     }
     
 }
