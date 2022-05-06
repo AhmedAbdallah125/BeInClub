@@ -9,4 +9,6 @@ import UIKit
 
 class URLs: NSObject {
 
+    static let LEAGUES_URL = "https://www.thesportsdb.com/api/v1/json/2/search_all_leagues.php?c=England"
+    
 }
