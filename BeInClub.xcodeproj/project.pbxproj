@@ -13,9 +13,9 @@
 		9C52E7F928217F550075A02A /* TeamsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C52E7F728217F550075A02A /* TeamsCollectionViewCell.xib */; };
 		9CA5539A2820087A00D8F3C1 /* LeagueDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA553982820087A00D8F3C1 /* LeagueDetailsViewController.swift */; };
 		9CA5539B2820087A00D8F3C1 /* LeagueDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CA553992820087A00D8F3C1 /* LeagueDetailsViewController.xib */; };
+		9CBE3CC228243141003B5E0C /* LeagueDetailsDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE3CC128243141003B5E0C /* LeagueDetailsDataClass.swift */; };
 		9CE12312282159F100E3EDEF /* UpcomingEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE12310282159F100E3EDEF /* UpcomingEventCollectionViewCell.swift */; };
 		9CE12313282159F100E3EDEF /* UpcomingEventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE12311282159F100E3EDEF /* UpcomingEventCollectionViewCell.xib */; };
-		A6BCE3A0FE8ED65245743C02 /* Pods_BeInClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5E1102CDA21509348FC081 /* Pods_BeInClub.framework */; };
 		ABDFADDB281DFF6000CC86DE /* LeaguesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFADDA281DFF6000CC86DE /* LeaguesViewController.swift */; };
 		ABDFADDD281DFFCB00CC86DE /* LeaguesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFADDC281DFFCB00CC86DE /* LeaguesTableViewCell.swift */; };
 		E2679E5D2823F16F0062FDDF /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2679E5C2823F16F0062FDDF /* URLs.swift */; };
@@ -29,6 +29,7 @@
 		E287A3042818361E00595B18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E287A3022818361E00595B18 /* LaunchScreen.storyboard */; };
 		E2E45F2E281891D300F07B8E /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E45F2D281891D300F07B8E /* SportsViewController.swift */; };
 		E2E45F302818955400F07B8E /* SportsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E45F2F2818955300F07B8E /* SportsCollectionViewCell.swift */; };
+		ECC5A552937344EA78841111 /* Pods_BeInClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BC451BF6363183F5E55969 /* Pods_BeInClub.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,11 +40,12 @@
 		9C52E7F728217F550075A02A /* TeamsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsCollectionViewCell.xib; sourceTree = "<group>"; };
 		9CA553982820087A00D8F3C1 /* LeagueDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailsViewController.swift; sourceTree = "<group>"; };
 		9CA553992820087A00D8F3C1 /* LeagueDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeagueDetailsViewController.xib; sourceTree = "<group>"; };
+		9CBE3CC128243141003B5E0C /* LeagueDetailsDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailsDataClass.swift; sourceTree = "<group>"; };
 		9CE12310282159F100E3EDEF /* UpcomingEventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEventCollectionViewCell.swift; sourceTree = "<group>"; };
 		9CE12311282159F100E3EDEF /* UpcomingEventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingEventCollectionViewCell.xib; sourceTree = "<group>"; };
 		ABDFADDA281DFF6000CC86DE /* LeaguesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesViewController.swift; sourceTree = "<group>"; };
 		ABDFADDC281DFFCB00CC86DE /* LeaguesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesTableViewCell.swift; sourceTree = "<group>"; };
-		AD5E1102CDA21509348FC081 /* Pods_BeInClub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeInClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0BC451BF6363183F5E55969 /* Pods_BeInClub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeInClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2679E5C2823F16F0062FDDF /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		E2679E5F2823F4AE0062FDDF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E287A2F12818361C00595B18 /* BeInClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeInClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6BCE3A0FE8ED65245743C02 /* Pods_BeInClub.framework in Frameworks */,
+				ECC5A552937344EA78841111 /* Pods_BeInClub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +77,7 @@
 		6EDA80D942BCCF367132EB40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AD5E1102CDA21509348FC081 /* Pods_BeInClub.framework */,
+				B0BC451BF6363183F5E55969 /* Pods_BeInClub.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -83,6 +85,7 @@
 		9C68016C28241C4800FC8A22 /* PONSO */ = {
 			isa = PBXGroup;
 			children = (
+				9CBE3CC128243141003B5E0C /* LeagueDetailsDataClass.swift */,
 			);
 			path = PONSO;
 			sourceTree = "<group>";
@@ -203,7 +206,7 @@
 				E287A2ED2818361C00595B18 /* Sources */,
 				E287A2EE2818361C00595B18 /* Frameworks */,
 				E287A2EF2818361C00595B18 /* Resources */,
-				A33F7131404F4BE1D843E32C /* [CP] Embed Pods Frameworks */,
+				7B5C0FE458291204D1AF1010 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -287,7 +290,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A33F7131404F4BE1D843E32C /* [CP] Embed Pods Frameworks */ = {
+		7B5C0FE458291204D1AF1010 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -316,6 +319,7 @@
 				E2E45F302818955400F07B8E /* SportsCollectionViewCell.swift in Sources */,
 				E287A2FF2818361C00595B18 /* BeInClub.xcdatamodeld in Sources */,
 				ABDFADDB281DFF6000CC86DE /* LeaguesViewController.swift in Sources */,
+				9CBE3CC228243141003B5E0C /* LeagueDetailsDataClass.swift in Sources */,
 				E287A2F52818361C00595B18 /* AppDelegate.swift in Sources */,
 				E2679E602823F4AE0062FDDF /* NetworkService.swift in Sources */,
 				E287A2F72818361C00595B18 /* SceneDelegate.swift in Sources */,
