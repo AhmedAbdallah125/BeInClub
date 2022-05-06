@@ -6,9 +6,12 @@
 //
 
 import UIKit
-
+import Kingfisher
  class LeagueDetailsViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
-    
+     var showError : String = ""
+     var allTeams : [Team] = []
+     var upComingEvents : [Event] = []
+     var lastEvents : [LastEvents] = []
      @IBOutlet weak var eventC: UICollectionView!
      @IBOutlet weak var teamsC: UICollectionView!
      
@@ -29,6 +32,64 @@ import UIKit
         self.resultC.dataSource = self
          
          resultC.register(UINib(nibName: "LatestResultCollectionViewCell", bundle:    nil ), forCellWithReuseIdentifier: "resultCell")
+         
+         
+         
+         NetworkService.fetchAllTeamsData(league: "Spanish_La_Liga",completion: { (result, error) in
+             
+             if let error : Error = error{
+                 
+                 let message = error.localizedDescription
+                 self.showError = message
+                 
+             }else{
+                 self.allTeams = result?.teams ?? []
+                 DispatchQueue.main.async {
+                     self.teamsC.reloadData()
+                 }
+                
+                 
+             }
+            
+         })
+         
+         NetworkService.fetchUpComingEvent(id: "4328", round: "38", season: "2021-2022",completion: { (result, error) in
+             
+             if let error : Error = error{
+                 
+                 let message = error.localizedDescription
+                 self.showError = message
+                 
+             }else{
+                 self.upComingEvents = result?.events ?? []
+                 DispatchQueue.main.async {
+                     self.eventC.reloadData()
+                 }
+                
+                 
+             }
+            
+         })
+         
+         NetworkService.fetchLastEvents(id: "4328", round: "35", season: "2021-2022",completion: { (result, error) in
+             
+             if let error : Error = error{
+                 
+                 let message = error.localizedDescription
+                 self.showError = message
+                 
+             }else{
+                 self.lastEvents = result?.events ?? []
+                 DispatchQueue.main.async {
+                     self.resultC.reloadData()
+                 }
+                
+                 
+             }
+            
+         })
+            
+         
         // Do any additional setup after loading the view.
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -37,26 +98,38 @@ import UIKit
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == resultC{
-            return 5
+            return lastEvents.count
+            
         }
         if collectionView == teamsC{
-            return 8
+            return allTeams.count
         }
-        return 20
+        return upComingEvents.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = eventC.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! UpcomingEventCollectionViewCell
 
-        cell.backgroundColor = UIColor.white
-        cell.secondTeam.text = "Manchester United"
-        cell.firstTeam.text = "Al Ahly"
+        if(collectionView == eventC){
+            let cell = eventC.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! UpcomingEventCollectionViewCell
+            cell.backgroundColor = UIColor.white
+            cell.secondTeam.text = upComingEvents[indexPath.row].strAwayTeam
+            cell.firstTeam.text = upComingEvents[indexPath.row].strHomeTeam
+//            cell.lbDate.text = upComingEvents[indexPath.row].dateEvent
+            cell.lbTime.text = upComingEvents[indexPath.row].strTime
+            return cell
+        }
+       
 
         if(collectionView == resultC){
             let resultCell = resultC.dequeueReusableCell(withReuseIdentifier: "resultCell", for: indexPath) as! LatestResultCollectionViewCell
             resultCell.backgroundColor = UIColor.white
-            resultCell.secondTeam.text = "liverpool"
-            resultCell.firstTeam.text = "Al Ahly"
+            resultCell.secondTeam.text = lastEvents[indexPath.row].strAwayTeam
+            resultCell.firstTeam.text = lastEvents[indexPath.row].strHomeTeam
+            resultCell.firstTeamScore.text = lastEvents[indexPath.row].intHomeScore
+            resultCell.secondTeamScore.text = lastEvents[indexPath.row].intAwayScore
+            resultCell.dateForScore.text = lastEvents[indexPath.row].dateEvent
+            resultCell.timeForScore.text = lastEvents[indexPath.row].strTime
             return resultCell
         }
         if(collectionView == teamsC){
@@ -68,8 +141,8 @@ import UIKit
             teamsCell.teamsImg.clipsToBounds = true
 
 
-
-            teamsCell.teamsImg.image = UIImage(named: "prim")
+            let url = URL(string: allTeams[indexPath.row].strTeamBadge)
+            teamsCell.teamsImg.kf.setImage(with: url)
             return teamsCell
         }
         return cell
@@ -85,4 +158,6 @@ import UIKit
         }
         return CGSize(width: 300, height: 160)
     }
+     
+    
 }
