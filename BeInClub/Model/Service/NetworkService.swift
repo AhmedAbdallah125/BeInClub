@@ -79,7 +79,6 @@ class NetworkService : AllLeaguesService, NetworkProtocol {
                         
                         return
                     }
-                    print(eventsData)
                     completion(eventsData, nil)
                 case .failure(let error):
                     print(error.localizedDescription)

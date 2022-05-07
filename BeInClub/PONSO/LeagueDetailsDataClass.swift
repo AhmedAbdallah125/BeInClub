@@ -12,7 +12,11 @@ struct Team: Decodable{
     let idTeam: String
     let strTeam: String
     let strTeamBadge: String
-    
+    let strLeague : String
+    let strStadium : String
+    let strStadiumThumb: String
+    let strDescriptionEN: String
+    let strCountry: String
 }
 
 struct AllTeams: Decodable {
