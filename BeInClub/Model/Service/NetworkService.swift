@@ -8,14 +8,18 @@
 import UIKit
 import Alamofire
 
+protocol AllLeaguesService {
+    static func getAllLeagues(compilationHandeler : @escaping ([League]?) -> Void)
+}
 
 
 protocol NetworkProtocol{
     static func getAllSportsResponse(completionHandler : @escaping(AllSportsResponse?)->Void )
 }
 
-class NetworkService: NetworkProtocol {
-    // for all sports response
+class NetworkService : AllLeaguesService, NetworkProtocol {
+
+        // for all sports response
     static func getAllSportsResponse(completionHandler: @escaping(AllSportsResponse?) -> Void) {
         //Using AlamoFire
         Session.default.request(URLs.allSportsURL)
@@ -32,6 +36,28 @@ class NetworkService: NetworkProtocol {
         
     }
     
+    static func getAllLeagues(compilationHandeler: @escaping ([League]?) -> Void) {
+        
+        AF.request(URLs.LEAGUES_URL, method: .get)
+            .response{ (response) in
+                
+                guard let data = response.data else { return }
+                
+                print(data.count)
+                
+                do {
+                    let leagues = try JSONDecoder().decode(LeagueResult.self, from: data)
+                    
+                    compilationHandeler(leagues.countrys)
+
+                } catch {
+                    print(error)
+                    compilationHandeler(nil)
+                }
+                
+            }
+    }
+            
   
     static func fetchLastEvents(id :String = "4328" ,round :String = "35", season :String = "2021-2022", completion : @escaping(LastResults?,Error?)->()){
         struct allEventParamters : Encodable{
@@ -66,7 +92,6 @@ class NetworkService: NetworkProtocol {
   
   static func fetchAllTeamsData(league : String = "English_Premier_League" ,completion : @escaping (AllTeams?, Error?)->()){
         
-       
         struct AllTeamsParamter : Encodable{
             let l : String
         }
