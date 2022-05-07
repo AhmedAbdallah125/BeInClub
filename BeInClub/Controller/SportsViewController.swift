@@ -113,6 +113,7 @@ extension SportsViewController{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0.1
     }
+
 }
 extension SportsViewController{
     // handle cell clicking
@@ -121,4 +122,5 @@ extension SportsViewController{
         countryController.sportName = sportName
         self.navigationController?.pushViewController(countryController, animated: true)
     }
+
 }
