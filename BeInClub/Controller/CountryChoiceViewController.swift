@@ -47,14 +47,21 @@ extension CountryChoiceViewController{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigateToLeaguesView(countryName: countries[indexPath.row].countryName)
+    }
     
 }
 extension CountryChoiceViewController{
     func initCoutriesChoice(){
         countries.append(Country(countryName: "England", countryImage: "e"))
-        countries.append(Country(countryName: "Spania", countryImage: "s"))
+        countries.append(Country(countryName: "Spani", countryImage: "s"))
         countries.append(Country(countryName: "France", countryImage: "f"))
-
-        
+    }
+    func navigateToLeaguesView(countryName:String){
+        let leaguesController = self.storyboard?.instantiateViewController(withIdentifier: "LeaguesViewController") as! LeaguesViewController
+        leaguesController.sportName = sportName
+        leaguesController.countryName = countryName
+        self.navigationController?.pushViewController(leaguesController, animated: true)
     }
 }
