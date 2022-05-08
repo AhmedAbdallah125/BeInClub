@@ -6,38 +6,106 @@
 //
 
 import UIKit
+import SDWebImage
 
 class LeaguesViewController: UITableViewController {
-
+    
+    var sportName :String!
+    var countryName:String!
+    var items = [League]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        NetworkService.getAllLeagues(country: countryName, sport: sportName) {
+            [weak self] (result) in
+            
+            if(result != nil) {
+                self?.items = result!
+                
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            }
+            
+        }
         
     }
 
 
     override func numberOfSections(in tableView: UITableView) -> Int {
 
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 0
+        return items.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LeaguesTableViewCell
-
-//        cell.leagueImage.image =
-//        cell.leagueName.text =
-//        cell.leagueYoutube.image =
+        
+        cell.leagueName.text = items[indexPath.row].strLeague
+        
+        
+        cell.leagueImage.sd_setImage(with: URL(string: items[indexPath.row].strBadge!), placeholderImage: UIImage(named: "placeholder.png"))
+        
+        // youtube icon
+        if(!items[indexPath.row].strYoutube!.isEmpty) {
+            cell.leagueYoutube.image = UIImage.init(named: "youtube")
+            
+        } else {
+            cell.leagueYoutube.image = UIImage.init(named: "youtube_trans")
+        }
+        
+        // click to youtube icon
+        let tapGestureRecognizer = CustomTapGestureRecognizer(target: self, action: #selector(imageTapped(gestureRecognizer:)))
+        tapGestureRecognizer.youtubeLink = items[indexPath.row].strYoutube
+        
+        cell.leagueYoutube.isUserInteractionEnabled = true
+        cell.leagueYoutube.addGestureRecognizer(tapGestureRecognizer)
         
         return cell
     }
     
+    @objc func imageTapped(gestureRecognizer: CustomTapGestureRecognizer)
+    {
+        if(!gestureRecognizer.youtubeLink!.isEmpty) {
+        
+        guard let url = URL(string: "https://\(gestureRecognizer.youtubeLink!)") else { return }
+        
+        UIApplication.shared.open(url, completionHandler: { success in
+                if success {
+                    print("opened")
+                } else {
+                    print("failed")
+                }
+            })
+        }
 
+    }
+    
+    class CustomTapGestureRecognizer: UITapGestureRecognizer {
+        var youtubeLink: String?
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // goto league details
+        
+    }
+    
+    func gotoLeaguesDetails() {
+        let leaguesDetailsController = self.storyboard?.instantiateViewController(withIdentifier: "LeagueDetailsViewController") as! LeagueDetailsViewController
+        //leaguesDetailsController.sportName = sportName
+        //leaguesDetailsController.countryName = countryName
+        self.navigationController?.pushViewController(leaguesController, animated: true)
+    }
+
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
