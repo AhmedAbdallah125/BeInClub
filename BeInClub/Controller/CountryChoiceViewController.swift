@@ -55,9 +55,9 @@ extension CountryChoiceViewController{
 extension CountryChoiceViewController{
     
     func initCoutriesChoice(){
-        countries.append(Country(countryName: "England", countryImage: "e"))
-        countries.append(Country(countryName: "Spain", countryImage: "s"))
-        countries.append(Country(countryName: "France", countryImage: "f"))
+        countries.append(Country(countryName: "England", countryImage: "gb"))
+        countries.append(Country(countryName: "Spain", countryImage: "es"))
+        countries.append(Country(countryName: "France", countryImage: "fr"))
     }
     
     func navigateToLeaguesView(countryName:String){
