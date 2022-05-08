@@ -95,14 +95,12 @@ class LeaguesViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         // goto league details
+        let leaguesDetailsController = LeagueDetailsViewController(nibName: "LeagueDetailsViewController", bundle: nil)
         
-    }
-    
-    func gotoLeaguesDetails() {
-        let leaguesDetailsController = self.storyboard?.instantiateViewController(withIdentifier: "LeagueDetailsViewController") as! LeagueDetailsViewController
-        //leaguesDetailsController.sportName = sportName
-        //leaguesDetailsController.countryName = countryName
-        self.navigationController?.pushViewController(leaguesController, animated: true)
+        leaguesDetailsController.leagueId = items[indexPath.row].idLeague!
+        leaguesDetailsController.leagueName = items[indexPath.row].strLeague!
+        
+        self.navigationController?.pushViewController(leaguesDetailsController, animated: true)
     }
 
     
