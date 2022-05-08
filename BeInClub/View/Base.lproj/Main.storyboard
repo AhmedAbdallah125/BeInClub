@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BvN-Mk-JFO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BvN-Mk-JFO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -100,22 +101,6 @@
             </objects>
             <point key="canvasLocation" x="323.1884057971015" y="480.80357142857139"/>
         </scene>
-        <!--Favourite-->
-        <scene sceneID="9Lc-qd-341">
-            <objects>
-                <viewController id="7br-VR-3xa" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ew3-wl-ANs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="41z-wM-5m6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Favourite" image="heart.fill" catalog="system" id="F1v-w9-lur"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tDZ-DM-EUF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1240.5797101449277" y="489.50892857142856"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="PkR-7Q-2Na">
             <objects>
@@ -134,7 +119,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="hSi-N4-FGW" kind="relationship" relationship="viewControllers" id="qa2-Jp-bpq"/>
-                        <segue destination="7br-VR-3xa" kind="relationship" relationship="viewControllers" id="g02-HY-lCM"/>
+                        <segue destination="quz-sW-cgC" kind="relationship" relationship="viewControllers" id="ZNZ-YB-gZO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DiJ-8Z-2S3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -151,7 +136,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="105" id="1xP-2Y-f6z" customClass="LeaguesTableViewCell" customModule="BeInClub" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="105"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="105"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1xP-2Y-f6z" id="DWc-8g-QmY">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
@@ -196,7 +181,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRN-ux-C1U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1089.8550724637682" y="-254.46428571428569"/>
+            <point key="canvasLocation" x="1730" y="-254"/>
         </scene>
         <!--Sports-->
         <scene sceneID="Egu-Hx-wUk">
@@ -236,7 +221,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="countryCell" rowHeight="106" id="Yhh-Fl-AC4" customClass="CountryTableViewCell" customModule="BeInClub" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="106"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yhh-Fl-AC4" id="hp5-ut-CxU">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
@@ -460,6 +445,64 @@
             </objects>
             <point key="canvasLocation" x="-1384.0579710144928" y="-254.46428571428569"/>
         </scene>
+        <!--favourite-->
+        <scene sceneID="ZMW-JV-1t7">
+            <objects>
+                <tableViewController id="quz-sW-cgC" customClass="LeaguesFaouriteTableViewController" customModule="BeInClub" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="107" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zvw-Lb-cic">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="105" id="CfD-oA-JJl" customClass="LeaguesTableViewCell" customModule="BeInClub" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="105"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CfD-oA-JJl" id="cdP-aV-GVN">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prim" translatesAutoresizingMaskIntoConstraints="NO" id="Rlf-E2-cIX">
+                                            <rect key="frame" x="11" y="18" width="59" height="63"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tJ-ZQ-d5l">
+                                            <rect key="frame" x="98" y="43" width="151" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Premier League">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.15979029010316675" green="0.092037254688685954" blue="0.42556875723379628" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="16" name="ArialNarrow"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jb7-SK-Fx4">
+                                            <rect key="frame" x="277" y="40" width="28" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="leagueImage" destination="Rlf-E2-cIX" id="n7k-Am-R7Z"/>
+                                    <outlet property="leagueName" destination="4tJ-ZQ-d5l" id="Rzc-4C-Iwf"/>
+                                    <outlet property="leagueYoutube" destination="jb7-SK-Fx4" id="lbY-ki-AxM"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="quz-sW-cgC" id="cJZ-zd-oYz"/>
+                            <outlet property="delegate" destination="quz-sW-cgC" id="8V5-9A-SoM"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="favourite" image="heart.fill" catalog="system" id="ooz-g5-h5p"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BI9-Y5-HNj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1193" y="481"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arsenal" width="4248" height="5000"/>
@@ -477,7 +520,7 @@
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

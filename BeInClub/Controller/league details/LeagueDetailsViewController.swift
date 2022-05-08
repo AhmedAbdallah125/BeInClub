@@ -8,6 +8,9 @@
 import UIKit
 import Kingfisher
  class LeagueDetailsViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
+     
+     var leagueName : String = "English Premier League"
+     var leagueId : String = "4328"
      var showError : String = ""
      var allTeams : [Team] = []
      var upComingEvents : [Event] = []
@@ -18,77 +21,13 @@ import Kingfisher
      @IBOutlet weak var resultC: UICollectionView!
      override func viewDidLoad() {
         super.viewDidLoad()
-        self.teamsC.delegate = self
-        self.teamsC.dataSource = self
+         leagueName = self.getLeagueName(leagueName: leagueName)
          
-         teamsC.register(UINib(nibName: "TeamsCollectionViewCell", bundle:    nil ), forCellWithReuseIdentifier: "teamsCell")
-         
-        self.eventC.delegate = self
-        self.eventC.dataSource = self
-
-         eventC.register(UINib(nibName: "UpcomingEventCollectionViewCell", bundle:    nil ), forCellWithReuseIdentifier: "cell")
-         
-        self.resultC.delegate = self
-        self.resultC.dataSource = self
-         
-         resultC.register(UINib(nibName: "LatestResultCollectionViewCell", bundle:    nil ), forCellWithReuseIdentifier: "resultCell")
-         
-         
-         
-         NetworkService.fetchAllTeamsData(league: "Spanish_La_Liga",completion: { (result, error) in
-             
-             if let error : Error = error{
-                 
-                 let message = error.localizedDescription
-                 self.showError = message
-                 
-             }else{
-                 self.allTeams = result?.teams ?? []
-                 DispatchQueue.main.async {
-                     self.teamsC.reloadData()
-                 }
-                
-                 
-             }
-            
-         })
-         
-         NetworkService.fetchUpComingEvent(id: "4328", round: "38", season: "2021-2022",completion: { (result, error) in
-             
-             if let error : Error = error{
-                 
-                 let message = error.localizedDescription
-                 self.showError = message
-                 
-             }else{
-                 self.upComingEvents = result?.events ?? []
-                 DispatchQueue.main.async {
-                     self.eventC.reloadData()
-                 }
-                
-                 
-             }
-            
-         })
-         
-         NetworkService.fetchLastEvents(id: "4328", round: "35", season: "2021-2022",completion: { (result, error) in
-             
-             if let error : Error = error{
-                 
-                 let message = error.localizedDescription
-                 self.showError = message
-                 
-             }else{
-                 self.lastEvents = result?.events ?? []
-                 DispatchQueue.main.async {
-                     self.resultC.reloadData()
-                 }
-                
-                 
-             }
-            
-         })
-            
+         self.registerCollectionView()
+         self.fetchTeamsData()
+         self.fetchUpcaomingEventsData()
+         self.fetchLastResultsEvents()
+      
          
         // Do any additional setup after loading the view.
     }
@@ -159,5 +98,117 @@ import Kingfisher
         return CGSize(width: 300, height: 160)
     }
      
-    
+     
+     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+         if(collectionView == teamsC){
+             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+             let teamsDetailsVC = storyBoard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+             
+             
+             let details  = Details(name: allTeams[indexPath.row].strTeam,
+                                    logoUrl: allTeams[indexPath.row].strTeamBadge,
+                                    league: allTeams[indexPath.row].strLeague,
+                                    stadiumName: allTeams[indexPath.row].strStadium,
+                                    stadiumImgUrl: allTeams[indexPath.row].strStadiumThumb,
+                                    country: allTeams[indexPath.row].strCountry,
+                                    description: allTeams[indexPath.row].strDescriptionEN)
+             teamsDetailsVC.detiales = details
+             self.navigationController?.pushViewController(teamsDetailsVC, animated: true)
+         }
+     }
+     
+     func getLeagueName (leagueName:String)-> (String){
+         var result = String()
+         for char in leagueName{
+             if char == " "{
+                 let temp :Character = "_"
+                 result.append(temp)
+             }
+             else{
+                 result.append(char)
+             }
+         }
+         return result
+     }
+     
+     func registerCollectionView(){
+         self.teamsC.delegate = self
+         self.teamsC.dataSource = self
+          
+          teamsC.register(UINib(nibName: "TeamsCollectionViewCell", bundle:    nil ), forCellWithReuseIdentifier: "teamsCell")
+          
+         self.eventC.delegate = self
+         self.eventC.dataSource = self
+
+          eventC.register(UINib(nibName: "UpcomingEventCollectionViewCell", bundle:    nil ), forCellWithReuseIdentifier: "cell")
+          
+         self.resultC.delegate = self
+         self.resultC.dataSource = self
+          
+          resultC.register(UINib(nibName: "LatestResultCollectionViewCell", bundle:    nil ), forCellWithReuseIdentifier: "resultCell")
+          
+          
+     }
+     
+     func fetchTeamsData (){
+         NetworkService.fetchAllTeamsData(league: leagueName,completion: { (result, error) in
+             
+             if let error : Error = error{
+                 
+                 let message = error.localizedDescription
+                 self.showError = message
+                 
+             }else{
+                 self.allTeams = result?.teams ?? []
+                 DispatchQueue.main.async {
+                     self.teamsC.reloadData()
+                 }
+                
+                 
+             }
+            
+         })
+     }
+     
+     func fetchUpcaomingEventsData(){
+         
+         NetworkService.fetchUpComingEvent(id: leagueId, round: "38", season: "2021-2022",completion: { (result, error) in
+             
+             if let error : Error = error{
+                 
+                 let message = error.localizedDescription
+                 self.showError = message
+                 
+             }else{
+                 self.upComingEvents = result?.events ?? []
+                 DispatchQueue.main.async {
+                     self.eventC.reloadData()
+                 }
+                
+                 
+             }
+            
+         })
+     }
+     
+     func fetchLastResultsEvents (){
+         NetworkService.fetchLastEvents(id: leagueId, round: "35", season: "2021-2022",completion: { (result, error) in
+             
+             if let error : Error = error{
+                 
+                 let message = error.localizedDescription
+                 self.showError = message
+                 
+             }else{
+                 self.lastEvents = result?.events ?? []
+                 DispatchQueue.main.async {
+                     self.resultC.reloadData()
+                 }
+                
+                 
+             }
+            
+         })
+            
+     }
 }
