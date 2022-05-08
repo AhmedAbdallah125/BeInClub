@@ -527,7 +527,7 @@
 		C6C057E2C271999CC552BCB88F22D267 /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		C7668B9C7BF66246683254FE4ECC05B1 /* SDAnimatedImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SDAnimatedImageView+WebCache.h"; path = "SDWebImage/Core/SDAnimatedImageView+WebCache.h"; sourceTree = "<group>"; };
 		C9192932E566A519DC8C473EA2C17304 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CA79D61F99A4EB9F4E4C013D2F569922 /* Pods_BeInClub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeInClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA79D61F99A4EB9F4E4C013D2F569922 /* Pods-BeInClub */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-BeInClub"; path = Pods_BeInClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB73328B7D98405B58FC3C11C6BF908F /* ReachabilitySwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ReachabilitySwift-dummy.m"; sourceTree = "<group>"; };
 		CBE0987970234376FB2452CBB41964A4 /* Kingfisher-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Kingfisher-Info.plist"; sourceTree = "<group>"; };
 		CC51026B1B44B61399ECA5B92C4552EE /* SDMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDMemoryCache.m; path = SDWebImage/Core/SDMemoryCache.m; sourceTree = "<group>"; };
@@ -944,7 +944,7 @@
 			children = (
 				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
 				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */,
-				CA79D61F99A4EB9F4E4C013D2F569922 /* Pods_BeInClub.framework */,
+				CA79D61F99A4EB9F4E4C013D2F569922 /* Pods-BeInClub */,
 				21B03CA622E690725A6626C088E1D09F /* Reachability.framework */,
 				B0B214D775196BA7CA8E17E53048A493 /* SDWebImage.framework */,
 			);
@@ -1237,7 +1237,7 @@
 			);
 			name = "Pods-BeInClub";
 			productName = Pods_BeInClub;
-			productReference = CA79D61F99A4EB9F4E4C013D2F569922 /* Pods_BeInClub.framework */;
+			productReference = CA79D61F99A4EB9F4E4C013D2F569922 /* Pods-BeInClub */;
 			productType = "com.apple.product-type.framework";
 		};
 		E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */ = {
