@@ -7,8 +7,10 @@
 
 import UIKit
 import Kingfisher
+import Reachability
  class LeagueDetailsViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
      
+     let reachability = try! Reachability()
      var leagueName : String = "English Premier League"
      var leagueId : String = "4328"
      var showError : String = ""
@@ -24,9 +26,24 @@ import Kingfisher
          leagueName = self.getLeagueName(leagueName: leagueName)
          
          self.registerCollectionView()
-         self.fetchTeamsData()
-         self.fetchUpcaomingEventsData()
-         self.fetchLastResultsEvents()
+         
+         reachability.whenReachable = { reachability in
+             // connect and get data from api
+             self.fetchTeamsData()
+             self.fetchUpcaomingEventsData()
+             self.fetchLastResultsEvents()
+         }
+         reachability.whenUnreachable = { _ in
+             print("Not reachable")
+             //make alert
+             self.showNoInternetAlert()
+         }
+         do {
+             try reachability.startNotifier()
+         } catch {
+             print("Unable to start notifier")
+         }
+         
       
          
         // Do any additional setup after loading the view.
@@ -52,9 +69,14 @@ import Kingfisher
         if(collectionView == eventC){
             let cell = eventC.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! UpcomingEventCollectionViewCell
             cell.backgroundColor = UIColor.white
+            cell.layer.borderWidth = 1
+            cell.layer.cornerRadius = 10
+            cell.layer.shadowColor = UIColor.black.cgColor
+            cell.layer.borderColor = UIColor.black.cgColor
+            
             cell.secondTeam.text = upComingEvents[indexPath.row].strAwayTeam
             cell.firstTeam.text = upComingEvents[indexPath.row].strHomeTeam
-//            cell.lbDate.text = upComingEvents[indexPath.row].dateEvent
+            cell.lbDate.text = upComingEvents[indexPath.row].dateEvent
             cell.lbTime.text = upComingEvents[indexPath.row].strTime
             return cell
         }
@@ -63,6 +85,10 @@ import Kingfisher
         if(collectionView == resultC){
             let resultCell = resultC.dequeueReusableCell(withReuseIdentifier: "resultCell", for: indexPath) as! LatestResultCollectionViewCell
             resultCell.backgroundColor = UIColor.white
+            resultCell.layer.borderWidth = 1
+            resultCell.layer.cornerRadius = 20
+            resultCell.layer.borderColor = UIColor.black.cgColor
+            
             resultCell.secondTeam.text = lastEvents[indexPath.row].strAwayTeam
             resultCell.firstTeam.text = lastEvents[indexPath.row].strHomeTeam
             resultCell.firstTeamScore.text = lastEvents[indexPath.row].intHomeScore
@@ -79,6 +105,8 @@ import Kingfisher
             teamsCell.teamsImg.layer.cornerRadius = teamsCell.teamsImg.frame.height/2
             teamsCell.teamsImg.clipsToBounds = true
 
+            teamsCell.layer.borderWidth = 1
+            teamsCell.layer.borderColor = UIColor.black.cgColor
 
             let url = URL(string: allTeams[indexPath.row].strTeamBadge)
             teamsCell.teamsImg.kf.setImage(with: url)
@@ -210,5 +238,12 @@ import Kingfisher
             
          })
             
+     }
+     
+     func showNoInternetAlert(){
+         let alert = UIAlertController(title: "There is NO Connection", message: "You should Connect to Network to get Data", preferredStyle: UIAlertController.Style.actionSheet)
+         let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+         alert.addAction(okAction)
+         self.present(alert, animated: true, completion: nil)
      }
 }
