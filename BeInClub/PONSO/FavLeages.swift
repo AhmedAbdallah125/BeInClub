@@ -11,5 +11,5 @@ struct FavLeagues {
     
     var leagueName : String
     var leaugeImaURL : String
-    
+    var leagueID : String
 }

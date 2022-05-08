@@ -9,7 +9,7 @@ import UIKit
 
 class URLs {
 
-    public static let LEAGUES_URL = "https://www.thesportsdb.com/api/v1/json/2/search_all_leagues.php?c=England"
+    public static let LEAGUES_URL = "https://www.thesportsdb.com/api/v1/json/2/search_all_leagues.php?c="
     
     public static var getAllTeams : String = "https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php"
     

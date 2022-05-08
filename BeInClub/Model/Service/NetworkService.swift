@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 
 protocol AllLeaguesService {
-    static func getAllLeagues(compilationHandeler : @escaping ([League]?) -> Void)
+    static func getAllLeagues(country:String, sport:String,compilationHandeler : @escaping ([League]?) -> Void)
 }
 
 
@@ -36,9 +36,9 @@ class NetworkService : AllLeaguesService, NetworkProtocol {
         
     }
     
-    static func getAllLeagues(compilationHandeler: @escaping ([League]?) -> Void) {
+    static func getAllLeagues(country:String, sport:String,compilationHandeler: @escaping ([League]?) -> Void) {
         
-        AF.request(URLs.LEAGUES_URL, method: .get)
+        AF.request("\(URLs.LEAGUES_URL)\(country)&s=\(sport)", method: .get)
             .response{ (response) in
                 
                 guard let data = response.data else { return }
@@ -47,7 +47,7 @@ class NetworkService : AllLeaguesService, NetworkProtocol {
                 
                 do {
                     let leagues = try JSONDecoder().decode(LeagueResult.self, from: data)
-                    
+
                     compilationHandeler(leagues.countrys)
 
                 } catch {

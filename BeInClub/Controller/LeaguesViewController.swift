@@ -16,13 +16,17 @@ class LeaguesViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        NetworkService.getAllLeagues { [weak self] (result) in
+        
+        
+        NetworkService.getAllLeagues(country: countryName, sport: sportName) {
+            [weak self] (result) in
             
-            self?.items = result!
-                        
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
+            if(result != nil) {
+                self?.items = result!
+                
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
             }
             
         }
@@ -91,7 +95,12 @@ class LeaguesViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         // goto league details
+        let leaguesDetailsController = LeagueDetailsViewController(nibName: "LeagueDetailsViewController", bundle: nil)
         
+        leaguesDetailsController.leagueId = items[indexPath.row].idLeague!
+        leaguesDetailsController.leagueName = items[indexPath.row].strLeague!
+        
+        self.navigationController?.pushViewController(leaguesDetailsController, animated: true)
     }
 
     

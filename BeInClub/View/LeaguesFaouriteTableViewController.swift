@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class LeaguesFaouriteTableViewController: UITableViewController {
 
@@ -38,6 +39,15 @@ class LeaguesFaouriteTableViewController: UITableViewController {
         //cell.leagueYoutube.addGestureRecognizer(tapGestureRecognizer)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let leaguesDetailsController = LeagueDetailsViewController(nibName: "LeagueDetailsViewController", bundle: nil)
+        
+        leaguesDetailsController.leagueId = leagues[indexPath.row].leagueID
+        leaguesDetailsController.leagueName = leagues[indexPath.row].leagueName
+        
+        self.navigationController?.pushViewController(leaguesDetailsController, animated: true)
     }
 
     func setEmptyView(title: String, message: String) {
@@ -72,7 +82,17 @@ class LeaguesFaouriteTableViewController: UITableViewController {
     }
     
     func fetchCoredate () {
-        //TODO: Get data from DB
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FavList")
+
+        do {
+            let results = try context.fetch(fetchRequest)
+            leagues = results as! [FavLeagues]
+        }catch let err as NSError {
+            print(err.debugDescription)
+        }
+        
         if leagues.count == 0 {
             self.setEmptyView(title: "You don't have any favorite league saved yet.", message: "Your favorite leagues will be in here.")
         }else {

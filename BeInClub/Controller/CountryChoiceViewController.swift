@@ -53,15 +53,18 @@ extension CountryChoiceViewController{
     
 }
 extension CountryChoiceViewController{
+    
     func initCoutriesChoice(){
-        countries.append(Country(countryName: "England", countryImage: "e"))
-        countries.append(Country(countryName: "Spani", countryImage: "s"))
-        countries.append(Country(countryName: "France", countryImage: "f"))
+        countries.append(Country(countryName: "England", countryImage: "gb"))
+        countries.append(Country(countryName: "Spain", countryImage: "es"))
+        countries.append(Country(countryName: "France", countryImage: "fr"))
     }
+    
     func navigateToLeaguesView(countryName:String){
         let leaguesController = self.storyboard?.instantiateViewController(withIdentifier: "LeaguesViewController") as! LeaguesViewController
         leaguesController.sportName = sportName
         leaguesController.countryName = countryName
         self.navigationController?.pushViewController(leaguesController, animated: true)
     }
+    
 }
