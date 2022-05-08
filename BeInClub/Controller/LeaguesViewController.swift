@@ -9,6 +9,7 @@ import UIKit
 import SDWebImage
 
 class LeaguesViewController: UITableViewController {
+    
     var sportName :String!
     var countryName:String!
     var items = [League]()

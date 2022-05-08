@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		195D87ACEAFA4A69E82503AC /* Pods_BeInClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82BA0BA5E9279ACD389F3EA /* Pods_BeInClub.framework */; };
+		0E5CBDEE3A9C50E9507C29CA /* Pods_BeInClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590F551E392E24AE70986D76 /* Pods_BeInClub.framework */; };
+		3F64A93B28286634005E5C27 /* FavLeages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64A93A28286634005E5C27 /* FavLeages.swift */; };
 		3F95991E282572FC005E5105 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95991D282572FC005E5105 /* DetailsViewController.swift */; };
 		9C52E7F428217D520075A02A /* LatestResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C52E7F228217D520075A02A /* LatestResultCollectionViewCell.swift */; };
 		9C52E7F528217D520075A02A /* LatestResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C52E7F328217D520075A02A /* LatestResultCollectionViewCell.xib */; };
@@ -17,13 +18,11 @@
 		9CA5539B2820087A00D8F3C1 /* LeagueDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CA553992820087A00D8F3C1 /* LeagueDetailsViewController.xib */; };
 		9CE12312282159F100E3EDEF /* UpcomingEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE12310282159F100E3EDEF /* UpcomingEventCollectionViewCell.swift */; };
 		9CE12313282159F100E3EDEF /* UpcomingEventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE12311282159F100E3EDEF /* UpcomingEventCollectionViewCell.xib */; };
-		A6BCE3A0FE8ED65245743C02 /* Pods_BeInClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5E1102CDA21509348FC081 /* Pods_BeInClub.framework */; };
 		AB4A686D2825F981005D3312 /* Detalis.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4A686C2825F981005D3312 /* Detalis.swift */; };
 		AB4A686F2825FA99005D3312 /* LeagueDetailsDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4A686E2825FA99005D3312 /* LeagueDetailsDataClass.swift */; };
 		AB6454282824558A00C48BCE /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6454272824558A00C48BCE /* League.swift */; };
 		ABDFADDB281DFF6000CC86DE /* LeaguesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFADDA281DFF6000CC86DE /* LeaguesViewController.swift */; };
 		ABDFADDD281DFFCB00CC86DE /* LeaguesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFADDC281DFFCB00CC86DE /* LeaguesTableViewCell.swift */; };
-		ABEDFD7F2824759D00533157 /* Pods_BeInClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEDFD7E2824759D00533157 /* Pods_BeInClub.framework */; };
 		ABEDFD842824AD0700533157 /* LeagueResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFD832824AD0700533157 /* LeagueResult.swift */; };
 		E21AAA352824A8FC0006A56B /* CountryChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AAA342824A8FC0006A56B /* CountryChoiceViewController.swift */; };
 		E21AAA372824C3050006A56B /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AAA362824C3050006A56B /* CountryTableViewCell.swift */; };
@@ -45,10 +44,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		210C76F9E69CBC7C44823B56 /* Pods-BeInClub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeInClub.debug.xcconfig"; path = "Target Support Files/Pods-BeInClub/Pods-BeInClub.debug.xcconfig"; sourceTree = "<group>"; };
-		3442B84EFD36EFF07EA9A0EC /* Pods-BeInClub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeInClub.release.xcconfig"; path = "Target Support Files/Pods-BeInClub/Pods-BeInClub.release.xcconfig"; sourceTree = "<group>"; };
+		284D70538996F8D8A8D6D254 /* Pods-BeInClub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeInClub.release.xcconfig"; path = "Target Support Files/Pods-BeInClub/Pods-BeInClub.release.xcconfig"; sourceTree = "<group>"; };
+		342470329CDC467B451C9DFD /* Pods-BeInClub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeInClub.debug.xcconfig"; path = "Target Support Files/Pods-BeInClub/Pods-BeInClub.debug.xcconfig"; sourceTree = "<group>"; };
+		3F64A93A28286634005E5C27 /* FavLeages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavLeages.swift; sourceTree = "<group>"; };
 		3F95991B28257147005E5105 /* Detalis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detalis.swift; sourceTree = "<group>"; };
 		3F95991D282572FC005E5105 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		590F551E392E24AE70986D76 /* Pods_BeInClub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeInClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C52E7F228217D520075A02A /* LatestResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestResultCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C52E7F328217D520075A02A /* LatestResultCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LatestResultCollectionViewCell.xib; sourceTree = "<group>"; };
 		9C52E7F628217F550075A02A /* TeamsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		9CA553992820087A00D8F3C1 /* LeagueDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeagueDetailsViewController.xib; sourceTree = "<group>"; };
 		9CE12310282159F100E3EDEF /* UpcomingEventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEventCollectionViewCell.swift; sourceTree = "<group>"; };
 		9CE12311282159F100E3EDEF /* UpcomingEventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingEventCollectionViewCell.xib; sourceTree = "<group>"; };
-		A82BA0BA5E9279ACD389F3EA /* Pods_BeInClub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeInClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB4A686C2825F981005D3312 /* Detalis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detalis.swift; sourceTree = "<group>"; };
 		AB4A686E2825FA99005D3312 /* LeagueDetailsDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailsDataClass.swift; sourceTree = "<group>"; };
 		AB6454272824558A00C48BCE /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
@@ -65,9 +65,7 @@
 		ABDFADDA281DFF6000CC86DE /* LeaguesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesViewController.swift; sourceTree = "<group>"; };
 		ABDFADDC281DFFCB00CC86DE /* LeaguesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesTableViewCell.swift; sourceTree = "<group>"; };
 		ABEDFD7A2824756900533157 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABEDFD7E2824759D00533157 /* Pods_BeInClub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_BeInClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABEDFD832824AD0700533157 /* LeagueResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueResult.swift; sourceTree = "<group>"; };
-		AD5E1102CDA21509348FC081 /* Pods_BeInClub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeInClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21AAA342824A8FC0006A56B /* CountryChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryChoiceViewController.swift; sourceTree = "<group>"; };
 		E21AAA362824C3050006A56B /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		E2679E5C2823F16F0062FDDF /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
@@ -93,9 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABEDFD7F2824759D00533157 /* Pods_BeInClub.framework in Frameworks */,
-				A6BCE3A0FE8ED65245743C02 /* Pods_BeInClub.framework in Frameworks */,
-				195D87ACEAFA4A69E82503AC /* Pods_BeInClub.framework in Frameworks */,
+				0E5CBDEE3A9C50E9507C29CA /* Pods_BeInClub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,11 +101,9 @@
 		93585B4240759C5F75C11E48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ABEDFD7E2824759D00533157 /* Pods_BeInClub.framework */,
 				ABEDFD7A2824756900533157 /* Alamofire.framework */,
 				AB73AEC028246A3300C1C6FC /* Alamofire.framework */,
-				AD5E1102CDA21509348FC081 /* Pods_BeInClub.framework */,
-				A82BA0BA5E9279ACD389F3EA /* Pods_BeInClub.framework */,
+				590F551E392E24AE70986D76 /* Pods_BeInClub.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,6 +134,7 @@
 				AB4A686C2825F981005D3312 /* Detalis.swift */,
 				AB6454272824558A00C48BCE /* League.swift */,
 				ABEDFD832824AD0700533157 /* LeagueResult.swift */,
+				3F64A93A28286634005E5C27 /* FavLeages.swift */,
 			);
 			path = PONSO;
 			sourceTree = "<group>";
@@ -147,8 +142,8 @@
 		B055B8EAB27EB7725F03036B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				210C76F9E69CBC7C44823B56 /* Pods-BeInClub.debug.xcconfig */,
-				3442B84EFD36EFF07EA9A0EC /* Pods-BeInClub.release.xcconfig */,
+				342470329CDC467B451C9DFD /* Pods-BeInClub.debug.xcconfig */,
+				284D70538996F8D8A8D6D254 /* Pods-BeInClub.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -252,11 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E287A3082818361E00595B18 /* Build configuration list for PBXNativeTarget "BeInClub" */;
 			buildPhases = (
-				79DA3988791BF6CA23C26439 /* [CP] Check Pods Manifest.lock */,
+				D14D9683A5BC3F84C0ACBA28 /* [CP] Check Pods Manifest.lock */,
 				E287A2ED2818361C00595B18 /* Sources */,
 				E287A2EE2818361C00595B18 /* Frameworks */,
 				E287A2EF2818361C00595B18 /* Resources */,
-				2D85089204C494F169D1BF2D /* [CP] Embed Pods Frameworks */,
+				1DACD7622ED73C72C694FD0D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -319,9 +314,9 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2D85089204C494F169D1BF2D /* [CP] Embed Pods Frameworks */ = {
+		1DACD7622ED73C72C694FD0D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
@@ -336,9 +331,9 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeInClub/Pods-BeInClub-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		79DA3988791BF6CA23C26439 /* [CP] Check Pods Manifest.lock */ = {
+		D14D9683A5BC3F84C0ACBA28 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
@@ -373,6 +368,7 @@
 				E2E45F302818955400F07B8E /* SportsCollectionViewCell.swift in Sources */,
 				E287A2FF2818361C00595B18 /* BeInClub.xcdatamodeld in Sources */,
 				ABDFADDB281DFF6000CC86DE /* LeaguesViewController.swift in Sources */,
+				3F64A93B28286634005E5C27 /* FavLeages.swift in Sources */,
 				E21AAA352824A8FC0006A56B /* CountryChoiceViewController.swift in Sources */,
 				E287A2F52818361C00595B18 /* AppDelegate.swift in Sources */,
 				E2679E602823F4AE0062FDDF /* NetworkService.swift in Sources */,
@@ -532,7 +528,7 @@
 		};
 		E287A3092818361E00595B18 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 210C76F9E69CBC7C44823B56 /* Pods-BeInClub.debug.xcconfig */;
+			baseConfigurationReference = 342470329CDC467B451C9DFD /* Pods-BeInClub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -562,7 +558,7 @@
 		};
 		E287A30A2818361E00595B18 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3442B84EFD36EFF07EA9A0EC /* Pods-BeInClub.release.xcconfig */;
+			baseConfigurationReference = 284D70538996F8D8A8D6D254 /* Pods-BeInClub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
