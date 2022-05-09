@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>BeInClub.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+<<<<<<< HEAD
+			<integer>0</integer>
+=======
+			<integer>5</integer>
+>>>>>>> bd77139719c761a99a07a9ed47b9747c3f2a1681
+		</dict>
+	</dict>
+</dict>
+</plist>

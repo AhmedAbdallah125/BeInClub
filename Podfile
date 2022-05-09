@@ -11,7 +11,7 @@ target 'BeInClub' do
   pod 'Kingfisher', '~> 7.0'
   pod 'ReachabilitySwift'
 
-
+  pod 'lottie-ios'
 
 
 
