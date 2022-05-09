@@ -10,6 +10,7 @@
 		116BC53576E7044C9E2EFEA9 /* Pods_BeInClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E8025509DD72092F8D0F84 /* Pods_BeInClub.framework */; };
 		3F64A93B28286634005E5C27 /* FavLeages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64A93A28286634005E5C27 /* FavLeages.swift */; };
 		3F95991E282572FC005E5105 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95991D282572FC005E5105 /* DetailsViewController.swift */; };
+		9C080BF12829508D00CF7BF1 /* LocalSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C080BF02829508D00CF7BF1 /* LocalSource.swift */; };
 		9C52E7F428217D520075A02A /* LatestResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C52E7F228217D520075A02A /* LatestResultCollectionViewCell.swift */; };
 		9C52E7F528217D520075A02A /* LatestResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C52E7F328217D520075A02A /* LatestResultCollectionViewCell.xib */; };
 		9C52E7F828217F550075A02A /* TeamsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C52E7F628217F550075A02A /* TeamsCollectionViewCell.swift */; };
@@ -37,7 +38,7 @@
 		E287A2FF2818361C00595B18 /* BeInClub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E287A2FD2818361C00595B18 /* BeInClub.xcdatamodeld */; };
 		E287A3012818361E00595B18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E287A3002818361E00595B18 /* Assets.xcassets */; };
 		E287A3042818361E00595B18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E287A3022818361E00595B18 /* LaunchScreen.storyboard */; };
-		E29E32E52824207500328521 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		E29E32E52824207500328521 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		E2E0235F28272DB40025E365 /* LeaguesFaouriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E0235E28272DB40025E365 /* LeaguesFaouriteTableViewController.swift */; };
 		E2E45F2E281891D300F07B8E /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E45F2D281891D300F07B8E /* SportsViewController.swift */; };
 		E2E45F302818955400F07B8E /* SportsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E45F2F2818955300F07B8E /* SportsCollectionViewCell.swift */; };
@@ -48,6 +49,7 @@
 		3F64A93A28286634005E5C27 /* FavLeages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavLeages.swift; sourceTree = "<group>"; };
 		3F95991B28257147005E5105 /* Detalis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detalis.swift; sourceTree = "<group>"; };
 		3F95991D282572FC005E5105 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		9C080BF02829508D00CF7BF1 /* LocalSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSource.swift; sourceTree = "<group>"; };
 		9C52E7F228217D520075A02A /* LatestResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestResultCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C52E7F328217D520075A02A /* LatestResultCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LatestResultCollectionViewCell.xib; sourceTree = "<group>"; };
 		9C52E7F628217F550075A02A /* TeamsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 				02E8025509DD72092F8D0F84 /* Pods_BeInClub.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C080BEF2829506E00CF7BF1 /* LocalDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				9C080BF02829508D00CF7BF1 /* LocalSource.swift */,
+			);
+			path = LocalDataSource;
 			sourceTree = "<group>";
 		};
 		9CA553972820085B00D8F3C1 /* league details */ = {
@@ -203,6 +213,7 @@
 		E287A30B281836AF00595B18 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9C080BEF2829506E00CF7BF1 /* LocalDataSource */,
 				E2679E5E2823F4390062FDDF /* Service */,
 				E2679E612823F7120062FDDF /* AllSportsResponse.swift */,
 				E2679E632823F7810062FDDF /* Sport.swift */,
@@ -220,7 +231,6 @@
 				9CE12311282159F100E3EDEF /* UpcomingEventCollectionViewCell.xib */,
 				E287A3022818361E00595B18 /* LaunchScreen.storyboard */,
 				E287A2FA2818361C00595B18 /* Main.storyboard */,
-				E2E0235E28272DB40025E365 /* LeaguesFaouriteTableViewController.swift */,
 				E21AAA362824C3050006A56B /* CountryTableViewCell.swift */,
 			);
 			path = View;
@@ -236,6 +246,7 @@
 				ABDFADDA281DFF6000CC86DE /* LeaguesViewController.swift */,
 				ABDFADDC281DFFCB00CC86DE /* LeaguesTableViewCell.swift */,
 				3F95991D282572FC005E5105 /* DetailsViewController.swift */,
+				E2E0235E28272DB40025E365 /* LeaguesFaouriteTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -302,7 +313,7 @@
 			files = (
 				9CA5539B2820087A00D8F3C1 /* LeagueDetailsViewController.xib in Resources */,
 				E287A3042818361E00595B18 /* LaunchScreen.storyboard in Resources */,
-				E29E32E52824207500328521 /* BuildFile in Resources */,
+				E29E32E52824207500328521 /* (null) in Resources */,
 				E287A3012818361E00595B18 /* Assets.xcassets in Resources */,
 				E287A2FC2818361C00595B18 /* Main.storyboard in Resources */,
 				9C52E7F528217D520075A02A /* LatestResultCollectionViewCell.xib in Resources */,
@@ -380,6 +391,7 @@
 				9C52E7F828217F550075A02A /* TeamsCollectionViewCell.swift in Sources */,
 				E2E45F2E281891D300F07B8E /* SportsViewController.swift in Sources */,
 				AB6454282824558A00C48BCE /* League.swift in Sources */,
+				9C080BF12829508D00CF7BF1 /* LocalSource.swift in Sources */,
 				E2679E622823F7120062FDDF /* AllSportsResponse.swift in Sources */,
 				E2679E642823F7810062FDDF /* Sport.swift in Sources */,
 				9CE12312282159F100E3EDEF /* UpcomingEventCollectionViewCell.swift in Sources */,

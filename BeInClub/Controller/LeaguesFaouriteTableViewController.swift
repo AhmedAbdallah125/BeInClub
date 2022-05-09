@@ -11,12 +11,26 @@ import CoreData
 class LeaguesFaouriteTableViewController: UITableViewController {
 
     private var leagues = [FavLeagues]()
+    var localSource : LocalSorce!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.fetchCoredate()
+        localSource = LocalSorce(appDelegete: UIApplication.shared.delegate as! AppDelegate)
+     
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        leagues = localSource.fetchCoredate()
+        self.tableView.reloadData()
+        if leagues.count == 0 {
+            self.setEmptyView(title: "You don't have any favorite league saved yet.", message: "Your favorite leagues will be in here.")
+            
+        }else {
+            self.restore()
+            
+        }
+        
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -81,24 +95,7 @@ class LeaguesFaouriteTableViewController: UITableViewController {
         self.tableView.separatorStyle = .singleLine
     }
     
-    func fetchCoredate () {
-        
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FavList")
-
-        do {
-            let results = try context.fetch(fetchRequest)
-            leagues = results as! [FavLeagues]
-        }catch let err as NSError {
-            print(err.debugDescription)
-        }
-        
-        if leagues.count == 0 {
-            self.setEmptyView(title: "You don't have any favorite league saved yet.", message: "Your favorite leagues will be in here.")
-        }else {
-            self.restore()
-        }
-    }
+    
     
 
 }

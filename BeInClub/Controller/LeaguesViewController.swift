@@ -99,6 +99,8 @@ class LeaguesViewController: UITableViewController {
         
         leaguesDetailsController.leagueId = items[indexPath.row].idLeague!
         leaguesDetailsController.leagueName = items[indexPath.row].strLeague!
+        leaguesDetailsController.leagueBage = items[indexPath.row].strBadge!
+        leaguesDetailsController.leagueYoutube = items[indexPath.row].strYoutube!
         
         self.navigationController?.pushViewController(leaguesDetailsController, animated: true)
     }
