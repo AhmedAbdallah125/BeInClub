@@ -7,12 +7,17 @@
 
 import UIKit
 import CoreData
+import Reachability
 
 class LeaguesFaouriteTableViewController: UITableViewController {
 
     private var leagues = [FavLeagues]()
     var localSource : LocalSorce!
     
+    let reachability = try! Reachability()
+
+   
+
     override func viewDidLoad() {
         super.viewDidLoad()
         localSource = LocalSorce(appDelegete: UIApplication.shared.delegate as! AppDelegate)
@@ -56,12 +61,33 @@ class LeaguesFaouriteTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let leaguesDetailsController = LeagueDetailsViewController(nibName: "LeagueDetailsViewController", bundle: nil)
         
-        leaguesDetailsController.leagueId = leagues[indexPath.row].leagueID
-        leaguesDetailsController.leagueName = leagues[indexPath.row].leagueName
         
-        self.navigationController?.pushViewController(leaguesDetailsController, animated: true)
+        
+        reachability.whenReachable = { reachability in
+            let leaguesDetailsController = LeagueDetailsViewController(nibName: "LeagueDetailsViewController", bundle: nil)
+            leaguesDetailsController.leagueId = self.leagues[indexPath.row].leagueID
+            leaguesDetailsController.leagueName = self.leagues[indexPath.row].leagueName
+            self.navigationController?.pushViewController(leaguesDetailsController, animated: true)
+            print("connected")
+        }
+        
+        reachability.whenUnreachable = { _ in
+            let alert = UIAlertController(title: "Network error", message: "There's no internet connection", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { action in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
+            print("not connected")
+        }
+        
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("Unable to start notifier")
+        }
+        
+       
     }
 
     func setEmptyView(title: String, message: String) {
