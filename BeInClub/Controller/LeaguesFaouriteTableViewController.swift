@@ -14,7 +14,7 @@ class LeaguesFaouriteTableViewController: UITableViewController {
     private var leagues = [FavLeagues]()
     var localSource : LocalSorce!
     
-    let reachability = try! Reachability()
+    var reachability = try! Reachability()
 
    
 
@@ -26,6 +26,7 @@ class LeaguesFaouriteTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         leagues = localSource.fetchCoredate()
+        reachability = try! Reachability()
         self.tableView.reloadData()
         if leagues.count == 0 {
             self.setEmptyView(title: "You don't have any favorite league saved yet.", message: "Your favorite leagues will be in here.")
@@ -52,18 +53,14 @@ class LeaguesFaouriteTableViewController: UITableViewController {
         
         
         cell.leagueImage.sd_setImage(with: URL(string: leagues[indexPath.row].leaugeImaURL), placeholderImage: UIImage(named: "placeholder.png"))
-        
-        
+                
         cell.leagueYoutube.isUserInteractionEnabled = true
-        //cell.leagueYoutube.addGestureRecognizer(tapGestureRecognizer)
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
-        
+    
         reachability.whenReachable = { reachability in
             let leaguesDetailsController = LeagueDetailsViewController(nibName: "LeagueDetailsViewController", bundle: nil)
             leaguesDetailsController.leagueId = self.leagues[indexPath.row].leagueID
@@ -88,6 +85,18 @@ class LeaguesFaouriteTableViewController: UITableViewController {
         }
         
        
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            try! localSource.removeFromCoreData(id: leagues[indexPath.item].leagueID)
+            leagues.remove(at: indexPath.item)
+            self.tableView.reloadData()
+        }
     }
 
     func setEmptyView(title: String, message: String) {
@@ -121,7 +130,4 @@ class LeaguesFaouriteTableViewController: UITableViewController {
         self.tableView.separatorStyle = .singleLine
     }
     
-    
-    
-
 }
