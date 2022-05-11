@@ -25,17 +25,7 @@ class LeaguesFaouriteTableViewController: UITableViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        leagues = localSource.fetchCoredate()
-        reachability = try! Reachability()
-        self.tableView.reloadData()
-        if leagues.count == 0 {
-            self.setEmptyView(title: "You don't have any favorite league saved yet.", message: "Your favorite leagues will be in here.")
-            
-        }else {
-            self.restore()
-            
-        }
-        
+        fetchData()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -49,7 +39,7 @@ class LeaguesFaouriteTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LeaguesTableViewCell
         
-        cell.leagueName.text = leagues[indexPath.row].leagueName
+        cell.leagueName.text = getLeagueName(leagueName:leagues[indexPath.row].leagueName)
         
         
         cell.leagueImage.sd_setImage(with: URL(string: leagues[indexPath.row].leaugeImaURL), placeholderImage: UIImage(named: "placeholder.png"))
@@ -95,6 +85,7 @@ class LeaguesFaouriteTableViewController: UITableViewController {
         if (editingStyle == .delete) {
             try! localSource.removeFromCoreData(id: leagues[indexPath.item].leagueID)
             leagues.remove(at: indexPath.item)
+            fetchData()
             self.tableView.reloadData()
         }
     }
@@ -128,6 +119,34 @@ class LeaguesFaouriteTableViewController: UITableViewController {
     func restore() {
         self.tableView.backgroundView = nil
         self.tableView.separatorStyle = .singleLine
+    }
+    
+    func fetchData(){
+        leagues.removeAll()
+        leagues = localSource.fetchCoredate()
+        reachability = try! Reachability()
+        self.tableView.reloadData()
+        if leagues.count == 0 {
+            self.setEmptyView(title: "You don't have any favorite league saved yet.", message: "Your favorite leagues will be in here.")
+            
+        }else {
+            self.restore()
+            
+        }
+    }
+    
+    func getLeagueName (leagueName:String)-> (String){
+        var result = String()
+        for char in leagueName{
+            if char == "_"{
+                let temp :Character = " "
+                result.append(temp)
+            }
+            else{
+                result.append(char)
+            }
+        }
+        return result
     }
     
 }
